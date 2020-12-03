@@ -10,23 +10,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <!-- 스플래시 액티비티-->
+        <activity android:name=".Edu_ProActivity"></activity>
+        <activity android:name=".Talent_ShareActivity" />
+        <activity android:name=".NoIn_jobActivity" />
+        <activity android:name=".Jang_jobActivity" />
+        <!-- 스플래시 액티비티 -->
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

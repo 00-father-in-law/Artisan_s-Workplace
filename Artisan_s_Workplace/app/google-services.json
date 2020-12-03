@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "922789789033",
+    "project_id": "artisan-s-workplace",
+    "storage_bucket": "artisan-s-workplace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922789789033:android:029161c6b32dd4067cd1f8",
+        "android_client_info": {
+          "package_name": "com.father_in_law.artisan_s_workplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922789789033-abotr3ivhsmk71h1rk3l125k4tf43urb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfmtP06MDPCWsidnvGki0GJvG_bo_CSJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922789789033-abotr3ivhsmk71h1rk3l125k4tf43urb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

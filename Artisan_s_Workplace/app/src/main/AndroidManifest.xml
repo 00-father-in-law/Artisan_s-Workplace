@@ -10,13 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Edu_ProActivity"></activity>
-        <activity android:name=".Talent_ShareActivity" />
-        <activity android:name=".NoIn_jobActivity" />
-        <activity android:name=".Jang_jobActivity" />
-        <!-- 스플래시 액티비티 -->
+        <activity android:name=".Activity.SignUpActivity"></activity>
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.Edu_ProActivity" />
+        <activity android:name=".Activity.Talent_ShareActivity" />
+        <activity android:name=".Activity.NoIn_jobActivity" />
+        <activity android:name=".Activity.Jang_jobActivity" /> <!-- 스플래시 액티비티 -->
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -25,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Activity.MainActivity" />
     </application>
 
 </manifest>

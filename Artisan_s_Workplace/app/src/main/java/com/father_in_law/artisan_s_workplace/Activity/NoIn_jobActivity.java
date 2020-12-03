@@ -1,8 +1,10 @@
-package com.father_in_law.artisan_s_workplace;
+package com.father_in_law.artisan_s_workplace.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.father_in_law.artisan_s_workplace.R;
 
 public class NoIn_jobActivity extends AppCompatActivity {
 

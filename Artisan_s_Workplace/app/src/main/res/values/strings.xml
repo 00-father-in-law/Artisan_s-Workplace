@@ -5,6 +5,7 @@
     <string name="talent_Share">재능 나눔 활동</string>
     <string name="edu_Pro">교육 프로그램</string>
     <string name="login">로그인</string>
+    <string name="logout">로그아웃</string>
     <string name="Jang_job">장애인 채용</string>
     <string name="NoIn_Job">노인 채용</string>
     <string name="Edu_Pro">교육 프로그램</string>
@@ -13,4 +14,9 @@
     <string name="노인채용">노인 채용</string>
     <string name="교육프로그램">교육 프로그램</string>
     <string name="재능나눔">재능나눔</string>
+    <string name="email">이메일</string>
+    <string name="password">비밀번호</string>
+    <string name="signup_complete">가입완료</string>
+    <string name="SignUp">회원가입</string>
+
 </resources>

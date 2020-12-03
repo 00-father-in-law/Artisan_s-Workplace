@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Edu_ProActivity">
+    tools:context=".Activity.Edu_ProActivity">
 
     <TextView
         android:id="@+id/textView3"

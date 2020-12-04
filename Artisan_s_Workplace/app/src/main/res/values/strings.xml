@@ -18,5 +18,6 @@
     <string name="password">비밀번호</string>
     <string name="signup_complete">가입완료</string>
     <string name="SignUp">회원가입</string>
+    <string name="load_xml_data">load XML data</string>
 
 </resources>

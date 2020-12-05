@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.father_in_law.artisan_s_workplace.Activity.Edu_ProActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Jang_jobActivity;
 import com.father_in_law.artisan_s_workplace.Activity.NoIn_jobActivity;
+import com.father_in_law.artisan_s_workplace.Activity.Search.SearchActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Talent_ShareActivity;
 import com.father_in_law.artisan_s_workplace.R;
 import com.father_in_law.artisan_s_workplace.Util.Firebase.FirebaseUtil;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         Jangjob_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Jang_jobActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
                 startActivity(intent);
             }
         });

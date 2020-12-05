@@ -338,7 +338,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/signup_next"
                 android:textColor="@color/darkskyblue"
-                android:layout_marginTop="123dp"
+                android:layout_marginTop="110dp"
                 android:background="@drawable/circularbtn_white"/>
 
 

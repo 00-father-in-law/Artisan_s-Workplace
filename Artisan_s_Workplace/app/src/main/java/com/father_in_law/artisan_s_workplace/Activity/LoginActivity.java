@@ -7,15 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.father_in_law.artisan_s_workplace.R;
 import com.father_in_law.artisan_s_workplace.Repository.FirebaseRepo.LoginRepository;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity implements LoginRepository.FirebaseLoginListener {
 
     private EditText email, password;
-    private Button signIn, signUp;
+    private Button signIn;
+    private TextView signUp;
+    private TextInputLayout inputLayout;
+    private ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +32,15 @@ public class LoginActivity extends AppCompatActivity implements LoginRepository.
         email = findViewById(R.id.login_email_text);
         password = findViewById(R.id.login_password_text);
 
-        signIn = findViewById(R.id.signin_btn);
-        signUp = findViewById(R.id.signup_btn);
+        signIn = findViewById(R.id.login_login_btn);
+        signUp = findViewById(R.id.login_signup_btn);
+        imageButton = findViewById(R.id.login_back_btn);
+
+        inputLayout = findViewById(R.id.login_password_textlayout);
+
+        inputLayout.setPasswordVisibilityToggleEnabled(true);
+        inputLayout.setHintEnabled(false);
+
 
         //리스너 연결
         final LoginRepository loginRepository = new LoginRepository(this, this);
@@ -54,6 +68,13 @@ public class LoginActivity extends AppCompatActivity implements LoginRepository.
                 startActivity(intent);
             }
         });
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     @Override
@@ -66,4 +87,7 @@ public class LoginActivity extends AppCompatActivity implements LoginRepository.
     public void onError() {
         Toast.makeText(LoginActivity.this, "로그인 에러", Toast.LENGTH_SHORT).show();
     }
+
+
+    //TODO:kms 자동 로그인, 카카오 로그인, 네이버 로그인, 비밀번호 찾기, 아이디 찾기, 로고 bold처리
 }

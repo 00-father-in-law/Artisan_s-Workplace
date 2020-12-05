@@ -14,7 +14,7 @@
     <string name="노인채용">노인 채용</string>
     <string name="교육프로그램">교육 프로그램</string>
     <string name="재능나눔">재능나눔</string>
-    <string name="email">이메일</string>
+    <string name="inputemail">이메일을 입력해주세요.</string>
     <string name="password">비밀번호</string>
     <string name="signup_complete">가입완료</string>
     <string name="SignUp">회원가입</string>
@@ -24,4 +24,20 @@
     <string name="search">검색하기</string>
     <string name="name">Name</string>
     <string name="button">Button</string>
+    <string name="id">아이디</string>
+    <string name="auto_login">자동 로그인</string>
+    <string name="id_search">아이디 찾기</string>
+    <string name="password_search">비밀번호 찾기</string>
+    <string name="inputpassword">비밀번호를 입력해주세요.</string>
+    <string name="otherLogin">다른 방식으로 로그인하기</string>
+    <string name="passwordchk">비밀번호 재확인</string>
+    <string name="signup_next">다음단계</string>
+    <string name="phoneNumber">핸드폰 번호</string>
+    <string name="inputPhone">핸드폰 번호를 입력해주세요</string>
+    <string name="inputcode">인증 번호를 입력해주세요.</string>
+    <string name="getcode">인증번호 받기</string>
+    <string name="birthdate">생년월일</string>
+    <string name="login_logo"><b>장인</b>의 <b>내 일</b>을 위해</string>
+    <string name="select_birth">생년월일을 선택해주세요.</string>
+
 </resources>

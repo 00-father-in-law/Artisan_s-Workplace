@@ -46,7 +46,7 @@
                     android:background="@drawable/circulartext"
                     android:text="+"
                     android:textColor="#74B1C5"
-                    android:textSize="24sp" />
+                    android:textSize="18sp" />
 
                 <Button
                     android:id="@+id/locbtn2"
@@ -54,10 +54,11 @@
                     android:layout_height="70dp"
                     android:layout_margin="15dp"
                     android:layout_weight="1"
+                    android:autoText="true"
                     android:background="@drawable/circulartext"
                     android:text="+"
                     android:textColor="#74B1C5"
-                    android:textSize="24sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <View
@@ -71,79 +72,97 @@
                 android:layout_marginRight="20dp"
                 android:background="#74B1C5" />
 
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="36dp" />
-
-            <TextView
-                android:layout_width="260dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:text="@string/keyword"
-                android:textColor="#74B1C5"
-                android:textSize="24sp" />
-
-            <View
-                android:id="@+id/view10"
-                android:layout_width="match_parent"
-                android:layout_height="30dp" />
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="379dp"
-                    android:background="@drawable/watercolor"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/inputKey1"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_margin="20dp"
-                        android:background="@drawable/circularbtn_white"
-                        android:ems="10"
-                        android:hint="+"
-                        android:inputType="textPersonName"
-                        android:textAlignment="center"
-                        android:textColor="#74B1C5"
-                        android:textColorHint="#74B1C5"
-                        android:textSize="24sp" />
-
-                    <EditText
-                        android:id="@+id/inputKey2"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_margin="20dp"
-                        android:background="@drawable/circularbtn_white"
-                        android:ems="10"
-                        android:hint="+"
-                        android:inputType="textPersonName"
-                        android:textAlignment="center"
-                        android:textColor="#74B1C5"
-                        android:textColorHint="#74B1C5"
-                        android:textSize="24sp" />
-
                     <View
-                        android:id="@+id/view9"
+                        android:id="@+id/view"
                         android:layout_width="match_parent"
-                        android:layout_height="47dp" />
+                        android:layout_height="36dp" />
 
-                    <Button
-                        android:id="@+id/search_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp"
-                        android:background="@drawable/circularbtn_white"
-                        android:text="검색하기"
+                    <TextView
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="@string/keyword"
                         android:textColor="#74B1C5"
-                        android:textSize="18sp" />
+                        android:textSize="24sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="379dp"
+                            android:background="@drawable/watercolor"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/inputKey1"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="20dp"
+                                android:background="@layout/dialog_background_round"
+                                android:enabled="false"
+                                android:ems="10"
+                                android:hint="+"
+                                android:inputType="textPersonName"
+                                android:textAlignment="center"
+                                android:textColor="#74B1C5"
+                                android:textColorHint="#74B1C5"
+                                android:textSize="24sp" />
+
+                            <EditText
+                                android:id="@+id/inputKey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="20dp"
+                                android:background="@layout/dialog_background_round"
+                                android:ems="10"
+                                android:hint="+"
+                                android:inputType="textPersonName"
+                                android:textAlignment="center"
+                                android:textColor="#74B1C5"
+                                android:textColorHint="#74B1C5"
+                                android:textSize="24sp"
+                                android:enabled="false"/>
+
+                            <View
+                                android:id="@+id/view9"
+                                android:layout_width="match_parent"
+                                android:layout_height="47dp" />
+
+                            <Button
+                                android:id="@+id/search_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:background="@drawable/circularbtn_white"
+                                android:text="검색하기"
+                                android:textColor="#74B1C5"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
                 </LinearLayout>
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="284dp"
+                    android:background="#D3636363" />
+
             </RelativeLayout>
+
         </LinearLayout>
     </ScrollView>
 

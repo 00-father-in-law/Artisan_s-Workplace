@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.father_in_law.artisan_s_workplace.Activity.Edu_ProActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Jang_jobActivity;
 import com.father_in_law.artisan_s_workplace.Activity.NoIn_jobActivity;
+import com.father_in_law.artisan_s_workplace.Activity.Search.PopupActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Search.SearchActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Talent_ShareActivity;
 import com.father_in_law.artisan_s_workplace.R;
@@ -55,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
-
                 intent.putExtra("num",1);
                 startActivity(intent);
             }

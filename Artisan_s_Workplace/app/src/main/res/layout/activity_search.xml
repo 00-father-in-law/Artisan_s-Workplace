@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@android:drawable/screen_background_light"
+    android:backgroundTint="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".Activity.Search.SearchActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="23dp" />
+
+            <TextView
+                android:layout_width="247dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/loc"
+                android:textColor="#74B1C5"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/locbtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circulartext"
+                    android:text="+"
+                    android:textColor="#74B1C5"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/locbtn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circulartext"
+                    android:text="+"
+                    android:textColor="#74B1C5"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#74B1C5" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="36dp" />
+
+            <TextView
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/keyword"
+                android:textColor="#74B1C5"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="379dp"
+                    android:background="@drawable/watercolor"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/inputKey1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/circularbtn_white"
+                        android:ems="10"
+                        android:hint="+"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center"
+                        android:textColor="#74B1C5"
+                        android:textColorHint="#74B1C5"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/inputKey2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/circularbtn_white"
+                        android:ems="10"
+                        android:hint="+"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center"
+                        android:textColor="#74B1C5"
+                        android:textColorHint="#74B1C5"
+                        android:textSize="24sp" />
+
+                    <View
+                        android:id="@+id/view9"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp" />
+
+                    <Button
+                        android:id="@+id/search_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/circularbtn_white"
+                        android:text="검색하기"
+                        android:textColor="#74B1C5"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

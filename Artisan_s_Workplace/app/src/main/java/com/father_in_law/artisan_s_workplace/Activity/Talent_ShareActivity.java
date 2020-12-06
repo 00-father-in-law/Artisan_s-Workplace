@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.father_in_law.artisan_s_workplace.Activity.Search.SearchActivity;
 import com.father_in_law.artisan_s_workplace.R;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -43,30 +46,17 @@ public class Talent_ShareActivity extends AppCompatActivity {
         adapter= new ArrayAdapter(this,android.R.layout.simple_list_item_1,items);
         //원래 layout을 .xml을 만들어야 하지만 예제이므로 안드로이에서 제공하는 것(android.R.layout.simple_list_item_1)을 사용
         listView.setAdapter(adapter);
-    }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-        super.onBackPressed();
-    }
-
-    public void clickBtn(View view) {
         //네트워크를 통해서 xml문서를 읽어오기..
         new Thread(){
             @Override
             public void run() {
                 items.clear();
 
-                if(loc1!=null){
-                    loc1="jk";
-                }
-
                 String adress = "http://apis.data.go.kr/B552474/JeOdJobOffPbServ/jegetOdJobOffPbList"
                         +"?serviceKey="+apiKey
                         +"&numOfRows=100"
-                        +"&pageNo=1"+"contRegnStr1"+loc+"contRegnStr2"+loc1;
+                        +"&pageNo=1"+"&contRegnStr1=서울특별시"+"&contRegnStr2=종로구";
                 //주소 뒤에 [? key=Value & key = value id= aaa & pw= 1234] 이게 GET방식
 
                 //adress="http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml?key=430156241533f1d058c603178cc3ca0e&targetDt=20190919";
@@ -116,9 +106,7 @@ public class Talent_ShareActivity extends AppCompatActivity {
                                 }else if(tagName.equals("hpInvtCnt")){
                                     buffer.append("홈페이지모집인원:");
                                     xpp.next();
-                                    buffer.append(xpp.getText()+"\n");  //아래 두줄을 한줄로 줄일 수 있다.
-//                                    String text = xpp.getText();
-//                                    buffer.append(text+"\n");
+                                    buffer.append(xpp.getText()+"\n");
 
                                 }else if(tagName.equals("hpNotiEdate")){
                                     buffer.append("공고종료일:");
@@ -165,7 +153,7 @@ public class Talent_ShareActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(Talent_ShareActivity.this, "파싱종료!!",Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(Talent_ShareActivity.this, "파싱종료!!",Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -175,5 +163,12 @@ public class Talent_ShareActivity extends AppCompatActivity {
 
             }// run() ..
         }.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
     }
 }

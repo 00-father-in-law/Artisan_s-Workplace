@@ -8,12 +8,6 @@
     android:padding="16dp"
     tools:context=".Activity.Talent_ShareActivity">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="load data from network"
-        android:textAllCaps="false"
-        android:onClick="clickBtn"/>
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"

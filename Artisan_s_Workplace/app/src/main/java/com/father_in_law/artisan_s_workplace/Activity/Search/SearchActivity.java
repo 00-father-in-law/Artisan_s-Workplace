@@ -103,6 +103,8 @@ public class SearchActivity extends AppCompatActivity {
         });
     }
 
+
+
     public void method1(String city, String gu,int i){
         if(i==1){
             Locbtn1.setText(city+" "+gu);
@@ -123,6 +125,7 @@ public class SearchActivity extends AppCompatActivity {
 
             Locbtn2.setBackgroundResource(R.drawable.circularbtn_skyblue);
             Locbtn2.setTextColor(Color.WHITE);
+
 
             list_btn.setEnabled(true);
             list_btn.setBackgroundResource(R.drawable.circularbtn_skyblue);

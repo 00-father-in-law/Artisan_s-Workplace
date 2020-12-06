@@ -24,8 +24,6 @@ public class Jang_jobActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jang_job);
 
-<<<<<<< Updated upstream
-=======
         imageButton = findViewById(R.id.Jang_Job_button);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +33,5 @@ public class Jang_jobActivity extends AppCompatActivity {
             }
         });
 
->>>>>>> Stashed changes
     }
 }

@@ -16,7 +16,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 
 public class Jang_jobActivity extends AppCompatActivity {
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

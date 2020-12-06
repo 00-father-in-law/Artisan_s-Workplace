@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.Search.SearchActivity"></activity>
+        <activity android:name=".Activity.Contents.program"></activity>
+        <activity android:name=".Activity.Contents.Job" />
+        <activity android:name=".Activity.Search.PopupActivity" />
+        <activity android:name=".Activity.Search.SearchActivity" />
         <activity android:name=".Activity.SignUpActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.Edu_ProActivity" />

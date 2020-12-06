@@ -25,8 +25,9 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Talent_ShareActivity extends AppCompatActivity {
-    //영화진흥위원회 통합전산망에서 발급받은 인증키
     String apiKey="hbTQ7F%2B3%2BWBpFBdl%2B0AQQ%2BTZs%2FdcIWpgAp6inN2%2BgR1ki44THNW8CLjRyD9l36Q3goAhGTgncXMwfou%2BGlFEXA%3D%3D";
+    String loc = null;
+    String loc1 = null;
 
     ListView listView;
     ArrayAdapter adapter;
@@ -48,15 +49,16 @@ public class Talent_ShareActivity extends AppCompatActivity {
         new Thread(){
             @Override
             public void run() {
-                //영화진흥위원회 open API를 통해
-                //일일박스오피스 정보를 가진 xml문서를
-                //읽어와서 분석하여 Listview에 보여주기
                 items.clear();
+
+                if(loc1!=null){
+                    loc1="jk";
+                }
 
                 String adress = "http://apis.data.go.kr/B552474/JeOdJobOffPbServ/jegetOdJobOffPbList"
                         +"?serviceKey="+apiKey
-                        +"&numOfRows=10"
-                        +"&pageNo=1";
+                        +"&numOfRows=100"
+                        +"&pageNo=1"+"contRegnStr1"+loc+"contRegnStr2"+loc1;
                 //주소 뒤에 [? key=Value & key = value id= aaa & pw= 1234] 이게 GET방식
 
                 //adress="http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml?key=430156241533f1d058c603178cc3ca0e&targetDt=20190919";

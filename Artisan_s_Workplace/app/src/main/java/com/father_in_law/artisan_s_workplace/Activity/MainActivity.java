@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+
+                intent.putExtra("num",1);
                 startActivity(intent);
             }
         });
@@ -62,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
         Noinjob_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), NoIn_jobActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                intent.putExtra("num",2);
                 startActivity(intent);
             }
         });
@@ -70,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
         TalentShare_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Talent_ShareActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                intent.putExtra("num",3);
                 startActivity(intent);
             }
         });
@@ -78,7 +82,8 @@ public class MainActivity extends AppCompatActivity {
         EduPro_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Edu_ProActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                intent.putExtra("num",4);
                 startActivity(intent);
             }
         });

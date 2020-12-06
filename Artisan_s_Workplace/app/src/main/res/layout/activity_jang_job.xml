@@ -9,11 +9,8 @@
     tools:context=".Activity.Jang_jobActivity"
     tools:ignore="UselessParent">
 
-    <HorizontalScrollView
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
+<<<<<<< Updated upstream
         <LinearLayout
             android:id="@+id/btnlist"
             android:layout_width="wrap_content"
@@ -53,8 +50,25 @@
                 android:text="Button" />
         </LinearLayout>
     </HorizontalScrollView>
+=======
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <ImageButton
+            android:id="@+id/Jang_Job_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/img_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </RelativeLayout>
+
+>>>>>>> Stashed changes
+
 </LinearLayout>

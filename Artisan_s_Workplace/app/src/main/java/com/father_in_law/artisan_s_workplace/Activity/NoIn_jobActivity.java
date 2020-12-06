@@ -2,12 +2,14 @@ package com.father_in_law.artisan_s_workplace.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.father_in_law.artisan_s_workplace.Activity.Search.SearchActivity;
 import com.father_in_law.artisan_s_workplace.R;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -22,7 +24,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class NoIn_jobActivity extends AppCompatActivity {
-    String apiKey="hbTQ7F%2B3%2BWBpFBdl%2B0AQQ%2BTZs%2FdcIWpgAp6inN2%2BgR1ki44THNW8CLjRyD9l36Q3goAhGTgncXMwfou%2BGlFEXA%3D%3D";
+    String apiKey="hbTQ7F%2B3%2BWBpFBdl%2B0AQQ%2BTZs%2FdcIWpgAp6inN2%2BgR1ki44THNW8CLjRyD9l36Q3goAhGTgncXMwfou%2BGlFEXA%3D%3D"; //행정구역 코드, 일자리 사업모집 공고
 
     ListView listView;
     ArrayAdapter adapter;
@@ -37,23 +39,19 @@ public class NoIn_jobActivity extends AppCompatActivity {
         adapter= new ArrayAdapter(this,android.R.layout.simple_list_item_1,items);
         //원래 layout을 .xml을 만들어야 하지만 예제이므로 안드로이에서 제공하는 것(android.R.layout.simple_list_item_1)을 사용
         listView.setAdapter(adapter);
-    }
 
-    public void clickBtn(View view) {
-        //네트워크를 통해서 xml문서를 읽어오기..
         new Thread(){
             @Override
             public void run() {
                 items.clear();
 
-                String adress = "http://apis.data.go.kr/B552474/JobBsnInfoService/getJobBsnRecruitList"
-                        +"?serviceKey="+apiKey
-                        +"&numOfRows=10"
-                        +"&pageNo=1";
+                String addresscode = "http://apis.data.go.kr/B552474/JobBsnInfoService/getJobAdministCodeList"+"?serviceKey="+apiKey+"&numOfRows=30"+"&largeClass=11";
+
+                String adress = "http://apis.data.go.kr/B552474/JobBsnInfoService/getJobBsnRecruitList"+"?serviceKey="+apiKey+"&numOfRows=100"+"&pageNo=1"+"dstrCd1="+"dstrCd2="+"projYear=2020";
 
                 try {
                     //URL객체생성
-                    URL url= new URL(adress);
+                    URL url= new URL(addresscode);
 
                     //Stream 열기                                     //is는 바이트 스트림이라 문자열로 받기위해 isr이 필요하고 isr을 pullparser에게 줘야하는데
                     InputStream is= url.openStream(); //바이트스트림
@@ -91,27 +89,12 @@ public class NoIn_jobActivity extends AppCompatActivity {
                                 tagName=xpp.getName();
                                 if(tagName.equals("item")){
                                     buffer=new StringBuffer();
-                                }else if(tagName.equals("hpInvtCnt")){
-                                    buffer.append("홈페이지모집인원:");
+                                }else if(tagName.equals("dstrName")){
                                     xpp.next();
-                                    buffer.append(xpp.getText()+"\n");  //아래 두줄을 한줄로 줄일 수 있다.
-//                                    String text = xpp.getText();
-//                                    buffer.append(text+"\n");
-
-                                }else if(tagName.equals("hpNotiEdate")){
-                                    buffer.append("공고종료일:");
+                                    buffer.append(xpp.getText());
+                                }else if(tagName.equals("dstrCd")){
                                     xpp.next();
-                                    buffer.append(xpp.getText()+"\n");
-
-                                }else if(tagName.equals("orgNm")){
-                                    buffer.append("수행기관명:");
-                                    xpp.next();
-                                    buffer.append(xpp.getText()+"\n");
-
-                                }else if(tagName.equals("projName")){
-                                    buffer.append("사업제목:");
-                                    xpp.next();
-                                    buffer.append(xpp.getText()+"\n");
+                                    buffer.append(xpp.getText()+" ");
                                 }
                                 break;
 
@@ -153,5 +136,12 @@ public class NoIn_jobActivity extends AppCompatActivity {
 
             }// run() ..
         }.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
     }
 }

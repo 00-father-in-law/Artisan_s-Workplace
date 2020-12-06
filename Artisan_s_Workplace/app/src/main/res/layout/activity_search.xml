@@ -145,9 +145,9 @@
                                 android:layout_height="60dp"
                                 android:layout_marginLeft="30dp"
                                 android:layout_marginRight="30dp"
-                                android:background="@drawable/circularbtn_white"
+                                android:background="@drawable/circulartext"
                                 android:text="검색하기"
-                                android:textColor="#74B1C5"
+                                android:textColor="#8E8E8E"
                                 android:textSize="18sp" />
                         </LinearLayout>
 
@@ -158,7 +158,7 @@
                 <View
                     android:id="@+id/view7"
                     android:layout_width="match_parent"
-                    android:layout_height="284dp"
+                    android:layout_height="312dp"
                     android:background="#D3636363" />
 
             </RelativeLayout>

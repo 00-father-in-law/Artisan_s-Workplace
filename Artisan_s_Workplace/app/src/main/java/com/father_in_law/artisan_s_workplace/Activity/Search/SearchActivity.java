@@ -35,15 +35,17 @@ public class SearchActivity extends AppCompatActivity {
     public Button Locbtn2;
     public String mcity;
     public String mgu;
+    public Button list_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        Button list_btn = (Button) findViewById(R.id.search_btn);
+        list_btn = (Button) findViewById(R.id.search_btn);
         Locbtn1 = (Button) findViewById(R.id.locbtn1);
         Locbtn2 = (Button) findViewById(R.id.locbtn2);
+        list_btn.setEnabled(false);
         mCon=this;
 
         Locbtn1.setOnClickListener(new View.OnClickListener() {
@@ -106,11 +108,25 @@ public class SearchActivity extends AppCompatActivity {
             Locbtn1.setText(city+" "+gu);
             mcity=city;
             mgu=gu;
+
+            Locbtn1.setBackgroundResource(R.drawable.circularbtn_skyblue);
+            Locbtn1.setTextColor(Color.WHITE);
+
+            list_btn.setEnabled(true);
+            list_btn.setBackgroundResource(R.drawable.circularbtn_skyblue);
+            list_btn.setTextColor(Color.WHITE);
         }
         if(i==2){
             Locbtn2.setText(city+" "+gu);
             mcity=city;
             mgu=gu;
+
+            Locbtn2.setBackgroundResource(R.drawable.circularbtn_skyblue);
+            Locbtn2.setTextColor(Color.WHITE);
+
+            list_btn.setEnabled(true);
+            list_btn.setBackgroundResource(R.drawable.circularbtn_skyblue);
+            list_btn.setTextColor(Color.WHITE);
         }
     }
 }

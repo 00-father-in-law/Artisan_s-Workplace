@@ -3,6 +3,7 @@ package com.father_in_law.artisan_s_workplace.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -42,6 +43,13 @@ public class Talent_ShareActivity extends AppCompatActivity {
         adapter= new ArrayAdapter(this,android.R.layout.simple_list_item_1,items);
         //원래 layout을 .xml을 만들어야 하지만 예제이므로 안드로이에서 제공하는 것(android.R.layout.simple_list_item_1)을 사용
         listView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
     }
 
     public void clickBtn(View view) {

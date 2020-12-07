@@ -35,10 +35,12 @@ public class Talent_Share_Adapter extends RecyclerView.Adapter<Talent_Share_Adap
 
     public void onBindViewHolder(TalentShareViewHolder holder, int position) {
         TalentShare data = this.datas.get(position);
-        holder.orgNm.setText("기관: " + data.getOrgNm());
-        holder.notiDate.setText("공고기간 :" + data.getHpNotiSdate() + " ~ " + data.getHpNotiEdate());
-        holder.proNm.setText("사업명: " + data.getProjName());
-        holder.proDate.setText("사업기간: " + data.getProjSdate() + " ~ " + data.getProjEdate());
+        holder.orgNm.setText(data.getOrgNm());
+        holder.notiDate.setText("- 공고 기간  "+dateParser(data.getHpNotiSdate())
+                + " ~ " +  dateParser(data.getHpNotiEdate()));
+        holder.proNm.setText(data.getProjName());
+        holder.proDate.setText("- 사업 기간  "+dateParser(data.getProjSdate())
+                + " ~ " + dateParser(data.getProjEdate()));
     }
 
     @Override
@@ -68,5 +70,14 @@ public class Talent_Share_Adapter extends RecyclerView.Adapter<Talent_Share_Adap
                 }
             });
         }
+    }
+
+    public String dateParser(String s){
+        String str = "";
+        str += s.substring(0,4) + ".";
+        str+=s.substring(4,6);
+        str+=".";
+        str+=s.substring(6,8);
+        return str;
     }
 }

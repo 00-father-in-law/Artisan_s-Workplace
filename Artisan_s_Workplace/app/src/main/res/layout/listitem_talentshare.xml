@@ -2,23 +2,16 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:paddingLeft="19dp"
-    android:paddingRight="19dp"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="17dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
-    <LinearLayout
-        android:background="@color/palegray"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="18dp"/>
 
     <LinearLayout
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:textSize="18dp"
@@ -37,29 +30,33 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
-    <TextView
-        android:textSize="16dp"
-        android:textColor="@color/black_sub"
-        android:id="@+id/listitem_notiDate_telentshare"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:text="모집기간"/>
+
     <TextView
         android:textSize="16dp"
         android:textColor="@color/black_sub"
         android:id="@+id/listitem_proNm_talentshare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="10dp"
         android:maxLines="1"
         android:text="프로젝트 이름"/>
+
+
     <TextView
         android:textSize="16dp"
         android:textColor="@color/black_sub"
+        android:id="@+id/listitem_notiDate_telentshare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="모집기간"/>
+
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/darkskyblue"
         android:id="@+id/listitem_proDate_talentshare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="5dp"
         android:text="사업 기간"/>
 </LinearLayout>

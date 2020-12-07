@@ -5,10 +5,12 @@
         android:font="@font/notosanskr_medium"
         app:font="@font/notosanskr_medium"
         android:includeFontPadding="false"
+        android:fontWeight="400"
         android:lineSpacingExtra="0dp"/>
     <font
         android:font="@font/notosanskr_bold"
         app:font="@font/notosanskr_bold"
         android:includeFontPadding="false"
+        android:fontWeight="700"
         android:lineSpacingExtra="0dp"/>
 </font-family>

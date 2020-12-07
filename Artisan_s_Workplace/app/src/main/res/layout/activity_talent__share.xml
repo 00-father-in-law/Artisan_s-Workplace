@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="18dp"/>
+
     <HorizontalScrollView
         android:scrollbars="none"
         android:layout_width="match_parent"
@@ -81,9 +82,11 @@
                 android:text="+"/>
         </LinearLayout>
     </HorizontalScrollView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/talent_share_recyclerview"
-        android:scrollbars="vertical"
+        android:scrollbars="none"
+        android:layout_marginHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>

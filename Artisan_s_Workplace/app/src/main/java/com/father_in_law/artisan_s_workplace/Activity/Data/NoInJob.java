@@ -85,7 +85,7 @@ public class NoInJob implements Parcelable {
         this.jobType = jobType2;
     }
 
-    public String getOrgNamee() {
+    public String getOrgName() {
         return this.orgName;
     }
 

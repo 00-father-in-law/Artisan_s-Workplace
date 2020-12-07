@@ -56,7 +56,7 @@ public class Talent_ShareActivity extends AppCompatActivity {
                 String adress = "http://apis.data.go.kr/B552474/JeOdJobOffPbServ/jegetOdJobOffPbList"
                         +"?serviceKey="+apiKey
                         +"&numOfRows=100"
-                        +"&pageNo=1"+"&contRegnStr1=서울특별시"+"&contRegnStr2=종로구";
+                        +"&pageNo=1"+"&contRegnStr1=서울특별시"+"&contRegnStr2=강남구";
                 //주소 뒤에 [? key=Value & key = value id= aaa & pw= 1234] 이게 GET방식
 
                 //adress="http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml?key=430156241533f1d058c603178cc3ca0e&targetDt=20190919";

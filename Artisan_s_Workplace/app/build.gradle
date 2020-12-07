@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.father_in_law.artisan_s_workplace"
-        minSdkVersion 26
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"

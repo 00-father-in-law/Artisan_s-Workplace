@@ -45,13 +45,13 @@ public class NoIn_jobActivity extends AppCompatActivity {
             public void run() {
                 items.clear();
 
-                String addresscode = "http://apis.data.go.kr/B552474/JobBsnInfoService/getJobAdministCodeList"+"?serviceKey="+apiKey+"&numOfRows=30"+"&largeClass=11";
+                //String addresscode = "http://apis.data.go.kr/B552474/JobBsnInfoService/getJobAdministCodeList"+"?serviceKey="+apiKey+"&numOfRows=30"+"&largeClass=11";
 
-                String adress = "http://apis.data.go.kr/B552474/JobBsnInfoService/getJobBsnRecruitList"+"?serviceKey="+apiKey+"&numOfRows=100"+"&pageNo=1"+"dstrCd1="+"dstrCd2="+"projYear=2020";
+                String adress = "http://apis.data.go.kr/B552474/JobBsnInfoService/getJobBsnRecruitList"+"?serviceKey="+apiKey+"&numOfRows=100"+"&pageNo=1"+"&dstrCd1="+"&dstrCd2=1168000000";
 
                 try {
                     //URL객체생성
-                    URL url= new URL(addresscode);
+                    URL url= new URL(adress);
 
                     //Stream 열기                                     //is는 바이트 스트림이라 문자열로 받기위해 isr이 필요하고 isr을 pullparser에게 줘야하는데
                     InputStream is= url.openStream(); //바이트스트림
@@ -89,10 +89,12 @@ public class NoIn_jobActivity extends AppCompatActivity {
                                 tagName=xpp.getName();
                                 if(tagName.equals("item")){
                                     buffer=new StringBuffer();
-                                }else if(tagName.equals("dstrName")){
+                                }else if(tagName.equals("hpNotiSdate")){
+                                    buffer.append("공고종료일:");
                                     xpp.next();
                                     buffer.append(xpp.getText());
-                                }else if(tagName.equals("dstrCd")){
+                                }else if(tagName.equals("orgName")){
+                                    buffer.append("수행기관명:");
                                     xpp.next();
                                     buffer.append(xpp.getText()+" ");
                                 }

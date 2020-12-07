@@ -21,7 +21,7 @@
     </string-array>
 
     <string-array name="Seoul">
-        <item>종로구</item>
+        <item>강남구</item>
         <!--<item>중구</item>
         <item>용산구</item>
         <item>성동구</item>
@@ -43,7 +43,7 @@
         <item>동작구</item>
         <item>관악구</item>
         <item>서초구</item>
-        <item>강남구</item>
+        <item>종로구</item>
         <item>송파구</item>
         <item>강동구</item>-->
     </string-array>

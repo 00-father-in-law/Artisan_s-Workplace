@@ -110,24 +110,28 @@ public class SearchActivity extends AppCompatActivity {
                         intent.putExtra("city",mcity);
                         intent.putExtra("gu",mgu);
                         startActivity(intent1);
+                        finish();
                         break;
                     case 2:
                         intent1 = new Intent(getApplicationContext(), NoIn_jobActivity.class);
                         intent.putExtra("city",mcity);
                         intent.putExtra("gu",mgu);
                         startActivity(intent1);
+                        finish();
                         break;
                     case 3:
                         intent1 = new Intent(getApplicationContext(), Talent_ShareActivity.class);
                         intent.putExtra("city",mcity);
                         intent.putExtra("gu",mgu);
                         startActivity(intent1);
+                        finish();
                         break;
                     case 4:
                         intent1 = new Intent(getApplicationContext(), Edu_ProActivity.class);
                         intent.putExtra("city",mcity);
                         intent.putExtra("gu",mgu);
                         startActivity(intent1);
+                        finish();
                         break;
                 }
             }

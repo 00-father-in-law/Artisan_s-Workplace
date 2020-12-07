@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -49,8 +50,7 @@ public class NoIn_jobActivity extends AppCompatActivity {
         recyclerView =findViewById(R.id.noinjob_recyclerview);
         noinjob_back_btn = findViewById(R.id.noinjob_back_btn);
 
-        btn1 = findViewById(R.id.talent_share_contRegn1);
-
+        btn1 = findViewById(R.id.noin_contRegn1);
         btn1.setText("서울시 강남구");
 
         NoIn_job_Adapter noin_job_Adapter = new NoIn_job_Adapter(nDatas);
@@ -196,12 +196,5 @@ public class NoIn_jobActivity extends AppCompatActivity {
                 }
             }
         }.start();
-    }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-        super.onBackPressed();
     }
 }

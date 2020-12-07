@@ -33,6 +33,5 @@ public class Jang_jobActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }

@@ -1,12 +1,16 @@
 package com.father_in_law.artisan_s_workplace.Activity.Search;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.GetChars;
 import android.text.Spannable;
@@ -14,14 +18,17 @@ import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.father_in_law.artisan_s_workplace.Activity.Edu_ProActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Jang_jobActivity;
+import com.father_in_law.artisan_s_workplace.Activity.LoginActivity;
 import com.father_in_law.artisan_s_workplace.Activity.NoIn_jobActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Talent_ShareActivity;
 import com.father_in_law.artisan_s_workplace.R;
@@ -35,24 +42,47 @@ public class SearchActivity extends AppCompatActivity {
     public Button Locbtn2;
     public String mcity;
     public String mgu;
-    public Button list_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        //툴바
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbarMethod(toolbar);
+
+        Button list_btn = (Button) findViewById(R.id.search_btn);
         list_btn = (Button) findViewById(R.id.search_btn);
         Locbtn1 = (Button) findViewById(R.id.locbtn1);
         Locbtn2 = (Button) findViewById(R.id.locbtn2);
         list_btn.setEnabled(false);
         mCon=this;
 
+        //edittext 클릭시
+        TextView et1 = (TextView) findViewById(R.id.inputKey1);
+        TextView et2 = (TextView) findViewById(R.id.inputKey2);
+
+        et1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SearchActivity.this, "개발 중입니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        et2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SearchActivity.this, "개발 중입니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         Locbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PopupActivity.num=1;
                 PopupActivity dlg = new PopupActivity(SearchActivity.this);
+                dlg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dlg.show();
             }
         });
@@ -62,6 +92,7 @@ public class SearchActivity extends AppCompatActivity {
             public void onClick(View v) {
                 PopupActivity.num=2;
                 PopupActivity dlg = new PopupActivity(SearchActivity.this);
+                dlg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dlg.show();
             }
         });
@@ -103,33 +134,41 @@ public class SearchActivity extends AppCompatActivity {
         });
     }
 
-
-
     public void method1(String city, String gu,int i){
         if(i==1){
             Locbtn1.setText(city+" "+gu);
             mcity=city;
             mgu=gu;
-
-            Locbtn1.setBackgroundResource(R.drawable.circularbtn_skyblue);
-            Locbtn1.setTextColor(Color.WHITE);
-
-            list_btn.setEnabled(true);
-            list_btn.setBackgroundResource(R.drawable.circularbtn_skyblue);
-            list_btn.setTextColor(Color.WHITE);
+            Locbtn1.setTextColor(ResourcesCompat.getColor(getResources(),
+                    R.color.darkskyblue, null));
+            Locbtn1.setBackgroundResource(R.drawable.img_lightblue_btn);
         }
         if(i==2){
             Locbtn2.setText(city+" "+gu);
             mcity=city;
             mgu=gu;
-
-            Locbtn2.setBackgroundResource(R.drawable.circularbtn_skyblue);
-            Locbtn2.setTextColor(Color.WHITE);
-
-
-            list_btn.setEnabled(true);
-            list_btn.setBackgroundResource(R.drawable.circularbtn_skyblue);
-            list_btn.setTextColor(Color.WHITE);
+            Locbtn2.setTextColor(ResourcesCompat.getColor(getResources(),
+                    R.color.darkskyblue, null));
+            Locbtn2.setBackgroundResource(R.drawable.img_lightblue_btn);
         }
+    }
+
+
+    public void toolbarMethod(Toolbar toolbar){
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

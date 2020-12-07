@@ -38,8 +38,7 @@ import javax.xml.datatype.Duration;
 public class SearchActivity extends AppCompatActivity {
     public static String text;
     public static Context mCon;
-    public Button Locbtn1;
-    public Button Locbtn2;
+    public TextView Locbtn1, Locbtn2;
     public String mcity;
     public String mgu;
     public Button list_btn;
@@ -55,9 +54,9 @@ public class SearchActivity extends AppCompatActivity {
 
 
         list_btn = (Button) findViewById(R.id.search_btn);
-        Locbtn1 = (Button) findViewById(R.id.locbtn1);
-        Locbtn2 = (Button) findViewById(R.id.locbtn2);
-        list_btn.setEnabled(false);
+        Locbtn1 = (TextView) findViewById(R.id.locbtn1);
+        Locbtn2 = (TextView) findViewById(R.id.locbtn2);
+        list_btn.setEnabled(true);
         mCon=this;
 
         //edittext 클릭시
@@ -137,7 +136,7 @@ public class SearchActivity extends AppCompatActivity {
 
     public void method1(String city, String gu,int i){
         if(i==1){
-            Locbtn1.setText(city+" "+gu);
+            Locbtn1.setText(city+"\n"+gu);
             mcity=city;
             mgu=gu;
             Locbtn1.setTextColor(ResourcesCompat.getColor(getResources(),
@@ -146,7 +145,7 @@ public class SearchActivity extends AppCompatActivity {
             list_btn.setEnabled(true);
         }
         if(i==2){
-            Locbtn2.setText(city+" "+gu);
+            Locbtn2.setText(city+"\n"+gu);
             mcity=city;
             mgu=gu;
             Locbtn2.setTextColor(ResourcesCompat.getColor(getResources(),

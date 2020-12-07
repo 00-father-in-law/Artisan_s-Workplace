@@ -53,21 +53,24 @@
                 android:layout_margin="38dp"
                 android:orientation="horizontal">
 
-                <Button
+                <TextView
                     android:id="@+id/locbtn1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="71dp"
                     android:layout_marginEnd="30dp"
                     android:layout_weight="1"
-                    android:background="@drawable/img_plus_button" />
+                    android:background="@drawable/img_plus_button"
+                    android:gravity="center"
+                    android:textSize="16dp" />
 
-                <Button
+                <TextView
                     android:id="@+id/locbtn2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="71dp"
                     android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="16dp"
                     android:background="@drawable/img_plus_button" />
-
             </LinearLayout>
 
             <View

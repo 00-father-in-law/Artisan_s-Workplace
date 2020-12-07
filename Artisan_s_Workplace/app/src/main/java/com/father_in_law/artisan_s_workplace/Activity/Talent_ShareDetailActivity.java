@@ -2,27 +2,34 @@ package com.father_in_law.artisan_s_workplace.Activity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.father_in_law.artisan_s_workplace.Activity.Data.TalentShare;
+import com.father_in_law.artisan_s_workplace.Activity.Data.TextviewData;
+import com.father_in_law.artisan_s_workplace.Adapter.Talent_Share_Adapter;
+import com.father_in_law.artisan_s_workplace.Adapter.TextviewListAdapter;
 import com.father_in_law.artisan_s_workplace.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Talent_ShareDetailActivity extends AppCompatActivity {
     private String apiKey;
     private TalentShare getTalentShare;
     private TextView hpCont;
-    private TextView notiDate;
     private TextView notiEdate;
-    private TextView orgNm_content;
     private TextView orgNm_main;
-    private TextView projEdate;
     private TextView projName;
     private String projNo = "";
-    private TextView projSdate;
+    private ArrayList<TextviewData> tDatas = new ArrayList();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,13 +41,13 @@ public class Talent_ShareDetailActivity extends AppCompatActivity {
         toolbarMethod(toolbar);
 
         apiKey = getString(R.string.talent_share_key);
+        //운영기관 명
         orgNm_main = findViewById(R.id.orgNm_main_talentshareDetail);
+        //사업 제목
         projName = findViewById(R.id.projName_talentshareDetail);
+        //접수마감기간
         notiEdate =findViewById(R.id.notiEdate_talentshareDetail);
-        orgNm_content = findViewById(R.id.orgNm_talentshareDetail);
-        projSdate =  findViewById(R.id.projSdate_talentshareDetail);
-        projEdate =  findViewById(R.id.projEdate_talentshareDetail);
-        notiDate =  findViewById(R.id.notiDate_talentshareDetail);
+        //공고 내용
         hpCont = findViewById(R.id.hpCont_talentshareDetail);
 
         TalentShare talentShare = getIntent().getParcelableExtra("talentshare");
@@ -50,15 +57,25 @@ public class Talent_ShareDetailActivity extends AppCompatActivity {
             orgNm_main.setText(talentShare.getOrgNm());
             projName.setText(getTalentShare.getProjName());
             notiEdate.setText(" ~ " + dateParser(getTalentShare.getHpNotiEdate()) + "까지");
-            orgNm_content.setText(getTalentShare.getOrgNm());
-            projSdate.setText(getTalentShare.getProjSdate());
-            projEdate.setText(getTalentShare.getProjEdate());
-            notiDate.setText(getTalentShare.getHpNotiSdate() + " ~ " + getTalentShare.getHpNotiEdate());
             String projNo2 = getTalentShare.getProjNo();
             this.projNo = projNo2;
+
+            //텍스트 리사이클러뷰 데이터 넣기
+            addData("수행 기관명", talentShare.getOrgNm());
+            addData("사업 시작일", dateParser(talentShare.getProjSdate()));
+            addData("사업 종료일", dateParser(talentShare.getProjEdate()));
+            addData("모집 기간",dateParser(talentShare.getHpNotiSdate()) + "\n~  "
+                    + dateParser(getTalentShare.getHpNotiEdate()));
         }
+
+        //텍스트 리사이클러뷰 연결
+        RecyclerView recyclerView = findViewById(R.id.textview_recyclerview);
+        TextviewListAdapter textviewListAdapter = new TextviewListAdapter(tDatas);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this)) ;
+        recyclerView.setAdapter(textviewListAdapter);
     }
 
+    //날짜 년월일 넣기
     public String dateParser(String s){
         String str = "";
         str += s.substring(0,4) + "년 ";
@@ -74,6 +91,7 @@ public class Talent_ShareDetailActivity extends AppCompatActivity {
         return str;
     }
 
+    //툴바 메서드
     public void toolbarMethod(Toolbar toolbar){
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
@@ -81,4 +99,20 @@ public class Talent_ShareDetailActivity extends AppCompatActivity {
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() ==android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    //텍스트 리사이클러뷰에 데이터 넣기
+    public void addData(String title, String contents){
+        TextviewData item = new TextviewData(title, contents);
+        tDatas.add(item);
+    }
+
+
 }

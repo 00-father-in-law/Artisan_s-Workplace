@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,9 +59,9 @@ public class Jang_jobDetailActivity extends AppCompatActivity {
         //모집 기간
         day = findViewById(R.id.m_recruitmentPeriod);
 
-
         JobItem jobitem = (JobItem) getIntent().getParcelableExtra("jangjob");
         getJobItem = jobitem;
+
 
         if (jobitem != null) {
             name.setText(jobitem.getEstablishmentName()); //사업장명

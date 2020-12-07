@@ -44,7 +44,7 @@
 
             <Button
                 android:textColor="#74b1c5"
-                android:id="@+id/talent_share_contRegn1"
+                android:id="@+id/noin_contRegn1"
                 android:background="@drawable/circularbtn_white"
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"

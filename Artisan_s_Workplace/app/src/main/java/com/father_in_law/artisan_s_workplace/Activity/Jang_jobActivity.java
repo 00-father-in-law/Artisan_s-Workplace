@@ -10,12 +10,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.father_in_law.artisan_s_workplace.Activity.Contents.TapActivity;
 import com.father_in_law.artisan_s_workplace.Adapter.JobAdapter;
 import com.father_in_law.artisan_s_workplace.Adapter.NoIn_job_Adapter;
 import com.father_in_law.artisan_s_workplace.R;
@@ -42,12 +42,15 @@ public class Jang_jobActivity extends AppCompatActivity {
     ListView listView;
     JobAdapter adapter;
     ArrayList<JobItem> items = new ArrayList<>();
+    private Button btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jang_job);
 
+        btn1 = findViewById(R.id.jang_contRegn1);
+        btn1.setText("서울시 강남구");
         initView();
 
         loadJobData();

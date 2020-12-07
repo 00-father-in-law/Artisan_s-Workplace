@@ -110,6 +110,7 @@ public class SearchActivity extends AppCompatActivity {
                         intent.putExtra("city",mcity);
                         intent.putExtra("gu",mgu);
                         startActivity(intent1);
+                        finish();
                         break;
                     case 2:
                         intent1 = new Intent(getApplicationContext(), NoIn_jobActivity.class);

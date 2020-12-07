@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.father_in_law.artisan_s_workplace.Activity.Contents.Job;
 import com.father_in_law.artisan_s_workplace.Activity.Data.TalentShare;
 import com.father_in_law.artisan_s_workplace.R;
 import com.father_in_law.artisan_s_workplace.data.JobItem;

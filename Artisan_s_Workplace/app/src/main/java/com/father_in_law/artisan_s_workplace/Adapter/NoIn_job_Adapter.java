@@ -36,7 +36,7 @@ public class NoIn_job_Adapter extends RecyclerView.Adapter<NoIn_job_Adapter.NoIn
 
     public void onBindViewHolder(NoIn_job_Adapter.NoInJobViewHolder holder, int position) {
         NoInJob data = this.datas.get(position);
-        holder.orgNm.setText("기관: " + data.getOrgNamee());
+        holder.orgNm.setText("기관: " + data.getOrgName());
         holder.notiDate.setText("공고기간 :" + data.getHpNotiSdate() + " ~ " + data.getHpNotiEdate());
         holder.workplace.setText("사업자: " + data.getWorkPlace());
         holder.intCnt.setText("임금: " + data.getIntCnt());
@@ -62,7 +62,7 @@ public class NoIn_job_Adapter extends RecyclerView.Adapter<NoIn_job_Adapter.NoIn
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int pos = NoIn_job_Adapter.NoInJobViewHolder.this.getAdapterPosition();
+                    int pos = NoInJobViewHolder.this.getAdapterPosition();
                     if (pos != -1 && NoIn_job_Adapter.this.mlistener != null) {
                         NoIn_job_Adapter.this.mlistener.onItemClick(view, pos);
                     }

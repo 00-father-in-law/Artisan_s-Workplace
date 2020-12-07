@@ -39,7 +39,7 @@
         <item name="android:textColor">@color/black_sub</item>
         <item name="android:textSize">14dp</item>
         <item name="android:includeFontPadding">false</item>
-        <!--<item name="android:fontFamily">@font/font</item>-->
+        <item name="android:fontFamily">@font/font</item> //만약 오류가 난다면 이 부분을 주석처리 해주세요
         <item name="android:lineSpacingExtra">0dp</item>
     </style>
 

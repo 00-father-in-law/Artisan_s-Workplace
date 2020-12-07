@@ -1,293 +1,318 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ScrollView
-        android:scrollbars="none"
+    <!--툴바-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fillViewport="true">
+        android:layout_gravity="top">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="검색"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
 
             <LinearLayout
-                android:orientation="vertical"
-                android:background="@drawable/background_giftandstudy"
-                android:padding="30dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:textSize="18dp"
-                    android:textColor="@color/black_sub"
-                    android:id="@+id/orgNm_main_talentshareDetail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="운영기관 명"/>
-
-                <TextView
-                    android:textSize="24dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black_sub"
-                    android:id="@+id/projName_talentshareDetail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="사업 제목"/>
-
-                <TextView
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black_sub"
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/notiEdate_talentshareDetail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="102dp"
-                    android:text="접수기간: "/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:padding="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/img_first_letter_big"
-                        android:layout_width="9dp" android:layout_height="14dp"/>
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_giftandstudy"
+                    android:orientation="vertical"
+                    android:padding="30dp">
 
                     <TextView
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black_sub"
+                        android:id="@+id/orgNm_main_talentshareDetail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:text="재능 나눔 정보"/>
+                        android:text="운영기관 명"
+                        android:textColor="@color/black_sub"
+                        android:textSize="18dp" />
 
+                    <TextView
+                        android:id="@+id/projName_talentshareDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="사업 제목"
+                        android:textColor="@color/black_sub"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/notiEdate_talentshareDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="102dp"
+                        android:text="접수기간: "
+                        android:textColor="@color/black_sub"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:background="@color/darkskyblue"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="13dp"/>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="30dp">
 
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/img_first_letter_big" />
 
                         <TextView
-                            android:textColor="@color/black_sub"
-                            android:paddingLeft="13dp"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:textSize="16dp"
-                            android:text="수행 기관명"/>
-
-                        <TextView
+                            android:layout_marginLeft="7dp"
+                            android:text="재능 나눔 정보"
                             android:textColor="@color/black_sub"
-                            android:paddingLeft="13dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:textSize="16dp"
-                            android:text="사업 시작일"/>
-
-                        <TextView
-                            android:textColor="@color/black_sub"
-                            android:paddingLeft="13dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:textSize="16dp"
-                            android:text="사업 종료일"/>
-
-                        <TextView
-                            android:textColor="@color/black_sub"
-                            android:paddingLeft="13dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:textSize="16dp"
-                            android:text="모집 기간"/>
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@color/darkskyblue" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:paddingLeft="13dp"
+                                android:text="수행 기관명"
+                                android:textColor="@color/black_sub"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:paddingLeft="13dp"
+                                android:text="사업 시작일"
+                                android:textColor="@color/black_sub"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:paddingLeft="13dp"
+                                android:text="사업 종료일"
+                                android:textColor="@color/black_sub"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:paddingLeft="13dp"
+                                android:text="모집 기간"
+                                android:textColor="@color/black_sub"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/orgNm_talentshareDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="수행 기관명"
+                                android:textColor="@color/gray_text"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/projSdate_talentshareDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="사업 시작일"
+                                android:textColor="@color/gray_text"
+
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/projEdate_talentshareDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="사업 종료일"
+                                android:textColor="@color/gray_text"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/notiDate_talentshareDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="모집 기간"
+                                android:textColor="@color/gray_text"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/palegray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/img_first_letter_big" />
 
                         <TextView
-                            android:id="@+id/orgNm_talentshareDetail"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:textSize="16dp"
-                            android:textColor="@color/gray_text"
-                            android:text="수행 기관명"/>
-
-                        <TextView
-                            android:id="@+id/projSdate_talentshareDetail"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:textColor="@color/gray_text"
-                            android:textSize="16dp"
-
-                            android:text="사업 시작일"/>
-
-                        <TextView
-                            android:id="@+id/projEdate_talentshareDetail"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="16dp"
-                            android:textColor="@color/gray_text"
-                            android:layout_marginTop="13dp"
-                            android:text="사업 종료일"/>
-
-                        <TextView
-                            android:id="@+id/notiDate_talentshareDetail"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="16dp"
-                            android:textColor="@color/gray_text"
-                            android:layout_marginTop="13dp"
-                            android:text="모집 기간"/>
+                            android:layout_marginLeft="7dp"
+                            android:text="공고 내용"
+                            android:textColor="@color/black_sub"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:background="@color/palegray"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"/>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:padding="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/img_first_letter_big"
-                        android:layout_width="9dp"
-                        android:layout_height="14dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@color/darkskyblue" />
 
                     <TextView
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black_sub"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/hpCont_talentshareDetail"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:text="공고 내용"/>
+                        android:layout_marginTop="13dp"
+                        android:text="홈페이지 공고가 없습니다."
+                        android:textColor="@color/black_sub"
+                        android:textSize="16dp" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:background="@color/darkskyblue"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="13dp"/>
+                    android:background="@color/palegray" />
 
-                <TextView
-                    android:textSize="16dp"
-                    android:textColor="@color/black_sub"
-                    android:id="@+id/hpCont_talentshareDetail"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="13dp"
-                    android:text="내용@@@@내용@@@@내용@@@@내용@@@@내용@@@@내용@@@@"/>
+                    android:orientation="vertical"
+                    android:padding="30dp">
 
-            </LinearLayout>
-            <LinearLayout
-                android:background="@color/palegray"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:padding="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/img_first_letter_big" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="기관 위치"
+                            android:textColor="@color/black_sub"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/img_first_letter_big"
-                        android:layout_width="9dp"
-                        android:layout_height="14dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@color/darkskyblue" />
 
                     <TextView
-                        android:textSize="18dp"
-                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/circulartext"
+                        android:text="지도자리(임시)"
                         android:textColor="@color/black_sub"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:text="기관 위치"/>
+                        android:textSize="16sp" />
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:background="@color/darkskyblue"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="13dp"/>
-
-                <TextView
-                    android:textSize="16sp"
-                    android:textColor="@color/black_sub"
-                    android:background="@drawable/circulartext"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="13dp"
-                    android:text="지도자리(임시)"/>
-
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp"
-        android:src="@drawable/floating"
-        android:backgroundTint="#7cc7e0"
-        app:borderWidth="0dp"
-        app:fabSize="normal"/>
-</FrameLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#7cc7e0"
+            android:src="@drawable/floating"
+            app:borderWidth="0dp"
+            app:fabSize="normal" />
+    </FrameLayout>
+</LinearLayout>

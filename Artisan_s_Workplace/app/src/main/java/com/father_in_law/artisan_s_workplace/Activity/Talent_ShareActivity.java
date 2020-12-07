@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.father_in_law.artisan_s_workplace.Activity.Data.TalentShare;
@@ -48,6 +49,8 @@ public class Talent_ShareActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.talent_share_contRegn1);
 
         btn1.setText("서울시 강남구");
+
+        recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), 1));
 
         Talent_Share_Adapter talent_Share_Adapter = new Talent_Share_Adapter(tDatas);
         tsAdapter = talent_Share_Adapter;
@@ -111,7 +114,6 @@ public class Talent_ShareActivity extends AppCompatActivity {
                 try {
                     //URL객체생성
                     URL url= new URL(adress);
-
 
                     InputStream is= url.openStream(); //바이트스트림
 

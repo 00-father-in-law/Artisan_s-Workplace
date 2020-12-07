@@ -41,6 +41,7 @@ public class SearchActivity extends AppCompatActivity {
     public TextView Locbtn1, Locbtn2;
     public String mcity;
     public String mgu;
+    public Button list_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,11 +52,11 @@ public class SearchActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbarMethod(toolbar);
 
-        Button list_btn = (Button) findViewById(R.id.search_btn);
+
         list_btn = (Button) findViewById(R.id.search_btn);
         Locbtn1 = (TextView) findViewById(R.id.locbtn1);
         Locbtn2 = (TextView) findViewById(R.id.locbtn2);
-        list_btn.setEnabled(true);
+        list_btn.setEnabled(false);
         mCon=this;
 
         //edittext 클릭시
@@ -141,6 +142,7 @@ public class SearchActivity extends AppCompatActivity {
             Locbtn1.setTextColor(ResourcesCompat.getColor(getResources(),
                     R.color.darkskyblue, null));
             Locbtn1.setBackgroundResource(R.drawable.img_lightblue_btn);
+            list_btn.setEnabled(true);
         }
         if(i==2){
             Locbtn2.setText(city+"\n"+gu);
@@ -149,6 +151,7 @@ public class SearchActivity extends AppCompatActivity {
             Locbtn2.setTextColor(ResourcesCompat.getColor(getResources(),
                     R.color.darkskyblue, null));
             Locbtn2.setBackgroundResource(R.drawable.img_lightblue_btn);
+            list_btn.setEnabled(true);
         }
     }
 

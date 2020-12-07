@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.father_in_law.artisan_s_workplace.Activity.Edu_ProActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Jang_jobActivity;
@@ -82,9 +83,10 @@ public class MainActivity extends AppCompatActivity {
         EduPro_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                /*Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
                 intent.putExtra("num",4);
-                startActivity(intent);
+                startActivity(intent);*/
+                Toast.makeText(getApplicationContext(),"개발 중입니다.",Toast.LENGTH_SHORT).show();
             }
         });
     }

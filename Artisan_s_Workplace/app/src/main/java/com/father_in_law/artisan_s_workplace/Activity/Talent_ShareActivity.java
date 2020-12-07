@@ -34,6 +34,7 @@ public class Talent_ShareActivity extends AppCompatActivity {
     private List<TalentShare> tDatas = new ArrayList();
     private int totalCount;
     private Talent_Share_Adapter tsAdapter;
+    private Button btn1;
 
     private ImageButton talent_share_back_btn;
 
@@ -44,6 +45,9 @@ public class Talent_ShareActivity extends AppCompatActivity {
         apiKey = getString(R.string.talent_share_key);
         recyclerView =findViewById(R.id.talent_share_recyclerview);
         talent_share_back_btn = findViewById(R.id.talent_share_back_btn);
+        btn1 = findViewById(R.id.talent_share_contRegn1);
+
+        btn1.setText("서울시 강남구");
 
         Talent_Share_Adapter talent_Share_Adapter = new Talent_Share_Adapter(tDatas);
         tsAdapter = talent_Share_Adapter;

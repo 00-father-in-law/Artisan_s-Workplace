@@ -9,10 +9,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.father_in_law.artisan_s_workplace.Activity.Contents.TapActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Data.NoInJob;
 import com.father_in_law.artisan_s_workplace.Activity.Data.TalentShare;
 import com.father_in_law.artisan_s_workplace.Activity.Search.SearchActivity;
@@ -41,6 +43,8 @@ public class NoIn_jobActivity extends AppCompatActivity {
     private NoIn_job_Adapter njAdapter;
 
     private ImageButton noinjob_back_btn;
+    private Button btn1;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,10 @@ public class NoIn_jobActivity extends AppCompatActivity {
         apiKey = getString(R.string.noin_job_key);
         recyclerView =findViewById(R.id.noinjob_recyclerview);
         noinjob_back_btn = findViewById(R.id.noinjob_back_btn);
+
+        btn1 = findViewById(R.id.talent_share_contRegn1);
+
+        btn1.setText("서울시 강남구");
 
         NoIn_job_Adapter noin_job_Adapter = new NoIn_job_Adapter(nDatas);
         njAdapter = noin_job_Adapter;
@@ -83,7 +91,7 @@ public class NoIn_jobActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(View v, int position) {
-                Intent intent = new Intent(NoIn_jobActivity.this, NoIn_jobActivity.class);
+                Intent intent = new Intent(NoIn_jobActivity.this, TapActivity.class);
                 intent.putExtra("noinjob", nDatas.get(position));
                 startActivity(intent);
             }

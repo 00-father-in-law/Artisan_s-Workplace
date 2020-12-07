@@ -20,7 +20,6 @@ import java.lang.reflect.Array;
 
 import io.grpc.internal.SharedResourceHolder;
 
-
 public class PopupActivity extends Dialog{
     private Context mContext;
     private Spinner spinner1;

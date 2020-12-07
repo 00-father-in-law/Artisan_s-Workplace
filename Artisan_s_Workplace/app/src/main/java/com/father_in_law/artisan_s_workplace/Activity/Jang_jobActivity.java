@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.father_in_law.artisan_s_workplace.R;
@@ -32,6 +33,5 @@ public class Jang_jobActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }

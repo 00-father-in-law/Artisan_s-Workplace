@@ -10,6 +10,22 @@
     android:orientation="vertical"
     tools:context=".Activity.Search.SearchActivity">
 
+    <!--툴바-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textSize="18dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -29,139 +45,102 @@
                 android:layout_marginStart="30dp"
                 android:text="@string/loc"
                 android:textColor="#74B1C5"
-                android:textSize="24sp" />
+                android:textSize="24dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="96dp"
-                android:layout_margin="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="38dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/locbtn1"
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_margin="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
                     android:layout_weight="1"
-                    android:background="@drawable/circulartext"
-                    android:text="+"
-                    android:textColor="#74B1C5"
-                    android:textSize="18sp" />
+                    android:background="@drawable/img_plus_button" />
 
                 <Button
                     android:id="@+id/locbtn2"
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_margin="15dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:autoText="true"
-                    android:background="@drawable/circulartext"
-                    android:text="+"
-                    android:textColor="#74B1C5"
-                    android:textSize="18sp" />
+                    android:background="@drawable/img_plus_button" />
+
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="35dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
                 android:background="#74B1C5" />
 
-            <RelativeLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="34dp"
+                android:text="@string/keyword"
+                android:textColor="#74B1C5"
+                android:textSize="24dp" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_bottomwatercolor"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <!--나중에 edittext로 바꿀 예정-->
+                <!--android:hint="+"
+                    android:enabled="false"
+                    android:inputType="textPersonName"-->
+                <TextView
+                    android:id="@+id/inputKey1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:layout_marginHorizontal="38dp"
+                    android:background="@drawable/circularbtn_20_gray_border"
+                    android:ems="10"
+                    android:text="+"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:textAlignment="center"
+                    android:textColor="#74B1C5"
+                    android:textColorHint="#74B1C5"
+                    android:textSize="24dp" />
 
-                    <View
-                        android:id="@+id/view"
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp" />
-
-                    <TextView
-                        android:layout_width="260dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:text="@string/keyword"
-                        android:textColor="#74B1C5"
-                        android:textSize="24sp" />
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="379dp"
-                            android:background="@drawable/watercolor"
-                            android:orientation="vertical">
-
-                            <EditText
-                                android:id="@+id/inputKey1"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:layout_margin="20dp"
-                                android:background="@layout/dialog_background_round"
-                                android:enabled="false"
-                                android:ems="10"
-                                android:hint="+"
-                                android:inputType="textPersonName"
-                                android:textAlignment="center"
-                                android:textColor="#74B1C5"
-                                android:textColorHint="#74B1C5"
-                                android:textSize="24sp" />
-
-                            <EditText
-                                android:id="@+id/inputKey2"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:layout_margin="20dp"
-                                android:background="@layout/dialog_background_round"
-                                android:ems="10"
-                                android:hint="+"
-                                android:inputType="textPersonName"
-                                android:textAlignment="center"
-                                android:textColor="#74B1C5"
-                                android:textColorHint="#74B1C5"
-                                android:textSize="24sp"
-                                android:enabled="false"/>
-
-                            <View
-                                android:id="@+id/view9"
-                                android:layout_width="match_parent"
-                                android:layout_height="47dp" />
-
-                            <Button
-                                android:id="@+id/search_btn"
-                                android:layout_width="match_parent"
-                                android:layout_height="60dp"
-                                android:layout_marginLeft="30dp"
-                                android:layout_marginRight="30dp"
-                                android:background="@drawable/circulartext"
-                                android:text="검색하기"
-                                android:textColor="#8E8E8E"
-                                android:textSize="18sp" />
-                        </LinearLayout>
-
-                    </RelativeLayout>
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/inputKey2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:layout_marginHorizontal="38dp"
+                    android:background="@drawable/circularbtn_20_gray_border"
+                    android:ems="10"
+                    android:text="+"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:textAlignment="center"
+                    android:textColor="#74B1C5"
+                    android:textColorHint="#74B1C5"
+                    android:textSize="24dp" />
 
                 <View
-                    android:id="@+id/view7"
                     android:layout_width="match_parent"
-                    android:layout_height="312dp"
-                    android:background="#D3636363" />
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
 
-            </RelativeLayout>
+                <Button
+                    android:id="@+id/search_btn"
+                    style="@style/AfrButton"
+                    android:layout_marginBottom="56dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:text="검색하기"/>
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

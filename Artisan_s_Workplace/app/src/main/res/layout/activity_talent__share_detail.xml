@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     android:orientation="vertical">
 
     <!--툴바-->
@@ -37,6 +39,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <!--이미지와 제목-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,6 +77,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
+                <!--소제목-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -107,101 +111,17 @@
                         android:layout_marginTop="13dp"
                         android:background="@color/darkskyblue" />
 
-                    <LinearLayout
+                    <!--반복 텍스트 리사이클러뷰-->
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/textview_recyclerview"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:paddingLeft="13dp"
-                                android:text="수행 기관명"
-                                android:textColor="@color/black_sub"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:paddingLeft="13dp"
-                                android:text="사업 시작일"
-                                android:textColor="@color/black_sub"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:paddingLeft="13dp"
-                                android:text="사업 종료일"
-                                android:textColor="@color/black_sub"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:paddingLeft="13dp"
-                                android:text="모집 기간"
-                                android:textColor="@color/black_sub"
-                                android:textSize="16dp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/orgNm_talentshareDetail"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:text="수행 기관명"
-                                android:textColor="@color/gray_text"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/projSdate_talentshareDetail"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:text="사업 시작일"
-                                android:textColor="@color/gray_text"
-
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/projEdate_talentshareDetail"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:text="사업 종료일"
-                                android:textColor="@color/gray_text"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/notiDate_talentshareDetail"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:text="모집 기간"
-                                android:textColor="@color/gray_text"
-                                android:textSize="16dp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
+                            android:layout_marginHorizontal="15dp"
+                            android:nestedScrollingEnabled="false"/>
+                    </RelativeLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -295,10 +215,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_marginTop="13dp"
+                        android:padding="10dp"
                         android:background="@drawable/circulartext"
                         android:text="지도자리(임시)"
                         android:textColor="@color/black_sub"
-                        android:textSize="16sp" />
+                        android:textSize="16dp" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -315,4 +236,6 @@
             app:borderWidth="0dp"
             app:fabSize="normal" />
     </FrameLayout>
+
+
 </LinearLayout>

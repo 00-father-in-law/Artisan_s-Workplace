@@ -55,7 +55,7 @@ public class SearchActivity extends AppCompatActivity {
         list_btn = (Button) findViewById(R.id.search_btn);
         Locbtn1 = (TextView) findViewById(R.id.locbtn1);
         Locbtn2 = (TextView) findViewById(R.id.locbtn2);
-        list_btn.setEnabled(false);
+        list_btn.setEnabled(true);
         mCon=this;
 
         //edittext 클릭시

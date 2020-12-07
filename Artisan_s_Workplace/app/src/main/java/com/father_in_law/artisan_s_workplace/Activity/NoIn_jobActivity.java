@@ -8,18 +8,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import com.father_in_law.artisan_s_workplace.Activity.Contents.TapActivity;
+import com.father_in_law.artisan_s_workplace.Activity.Contents.NoIn_jobDetailActivity;
+//import com.father_in_law.artisan_s_workplace.Activity.Contents.TabActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Data.NoInJob;
-import com.father_in_law.artisan_s_workplace.Activity.Data.TalentShare;
-import com.father_in_law.artisan_s_workplace.Activity.Search.SearchActivity;
 import com.father_in_law.artisan_s_workplace.Adapter.NoIn_job_Adapter;
-import com.father_in_law.artisan_s_workplace.Adapter.Talent_Share_Adapter;
 import com.father_in_law.artisan_s_workplace.R;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -91,7 +86,7 @@ public class NoIn_jobActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(View v, int position) {
-                Intent intent = new Intent(NoIn_jobActivity.this, TapActivity.class);
+                Intent intent = new Intent(NoIn_jobActivity.this, NoIn_jobDetailActivity.class);
                 intent.putExtra("noinjob", nDatas.get(position));
                 startActivity(intent);
             }

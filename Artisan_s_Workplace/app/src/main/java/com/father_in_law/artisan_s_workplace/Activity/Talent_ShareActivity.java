@@ -193,11 +193,4 @@ public class Talent_ShareActivity extends AppCompatActivity {
             }
         }.start();
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-        super.onBackPressed();
-    }
 }

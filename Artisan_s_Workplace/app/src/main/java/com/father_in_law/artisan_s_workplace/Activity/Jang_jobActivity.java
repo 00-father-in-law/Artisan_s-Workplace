@@ -8,13 +8,16 @@ import android.content.res.XmlResourceParser;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.father_in_law.artisan_s_workplace.Activity.Contents.TapActivity;
 import com.father_in_law.artisan_s_workplace.Adapter.JobAdapter;
+import com.father_in_law.artisan_s_workplace.Adapter.NoIn_job_Adapter;
 import com.father_in_law.artisan_s_workplace.R;
 import com.father_in_law.artisan_s_workplace.data.JobItem;
 
@@ -36,8 +39,6 @@ import de.siegmar.fastcsv.reader.CsvReader;
 import de.siegmar.fastcsv.reader.CsvRow;
 
 public class Jang_jobActivity extends AppCompatActivity {
-
-
     ListView listView;
     JobAdapter adapter;
     ArrayList<JobItem> items = new ArrayList<>();
@@ -50,6 +51,15 @@ public class Jang_jobActivity extends AppCompatActivity {
         initView();
 
         loadJobData();
+
+        this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(Jang_jobActivity.this, Jang_jobDetailActivity.class);
+                intent.putExtra("jangjob", items.get(position));
+                startActivity(intent);
+            }
+        });
     }
 
     private void initView() {
@@ -158,10 +168,4 @@ public class Jang_jobActivity extends AppCompatActivity {
         return tempFile;
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-        super.onBackPressed();
-    }
 }

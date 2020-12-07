@@ -1,5 +1,8 @@
 package com.father_in_law.artisan_s_workplace.data;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
 /**
@@ -8,7 +11,7 @@ import java.io.Serializable;
  * Intent intent = new Intent();
  *             intent.putExtra("data", jobItem);
  */
-public class JobItem implements Serializable {
+public class JobItem implements  Parcelable {
     private String primaryKey; //연번
     private String recruitmentDate; //구인 등록일
     private String recruitmentPeriod; //모집 기간
@@ -210,4 +213,66 @@ public class JobItem implements Serializable {
     public void setContactInformation(String contactInformation) {
         this.contactInformation = contactInformation;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(getPrimaryKey());
+        dest.writeString(getRecruitmentDate());
+        dest.writeString(getRecruitmentPeriod());
+        dest.writeString(getEstablishmentName());
+        dest.writeString(getRecruitmentType());
+        dest.writeString(getEmploymentType());
+        dest.writeString(getWageFrom());
+        dest.writeString(getWages());
+        dest.writeString(getWorkPlace());
+        dest.writeString(getEntranceType());
+        dest.writeString(getRequiredCareer());
+        dest.writeString(getRequiredEducational());
+        dest.writeString(getMajor());
+        dest.writeString(getRequiredCertificate());
+        dest.writeString(getEstablishmentAddress());
+        dest.writeString(getCorporateForm());
+        dest.writeString(getAgency());
+        dest.writeString(getRegistrationDate());
+        dest.writeString(getContactInformation());
+    }
+
+    public JobItem(Parcel in){
+        primaryKey=in.readString(); //연번
+        recruitmentDate=in.readString(); //구인 등록일
+        recruitmentPeriod=in.readString(); //모집 기간
+        establishmentName=in.readString(); //사업자명
+        recruitmentType=in.readString(); //모집 직종
+        employmentType=in.readString(); //고용형태
+        wageFrom=in.readString(); //임금 형태
+        wages=in.readString(); //임금
+        workPlace=in.readString(); //근무지
+        entranceType=in.readString(); //입사 형태
+        requiredCareer=in.readString(); //요구 경력
+        requiredEducational=in.readString(); //요구 학력
+        major=in.readString(); //전공 계열
+        requiredCertificate=in.readString(); //요구 자격증
+        establishmentAddress=in.readString(); //사업장 주소
+        corporateForm=in.readString(); //기업형태
+        agency=in.readString(); //담당 기관
+        registrationDate=in.readString(); //등록일
+        contactInformation=in.readString(); //연락처
+    }
+
+    public static final Creator<JobItem> CREATOR = new Creator<JobItem>() {
+        @Override
+        public JobItem createFromParcel(Parcel in) {
+            return new JobItem(in);
+        }
+
+        @Override
+        public JobItem[] newArray(int size) {
+            return new JobItem[size];
+        }
+    };
 }

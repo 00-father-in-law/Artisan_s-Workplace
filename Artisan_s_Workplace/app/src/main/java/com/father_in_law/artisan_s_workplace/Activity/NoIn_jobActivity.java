@@ -202,11 +202,4 @@ public class NoIn_jobActivity extends AppCompatActivity {
             }
         }.start();
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-        super.onBackPressed();
-    }
 }

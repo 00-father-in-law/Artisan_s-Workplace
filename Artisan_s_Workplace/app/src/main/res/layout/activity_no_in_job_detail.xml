@@ -313,17 +313,41 @@
                     android:layout_marginTop="13dp"
                     android:text="지도자리(임시)"/>
 
+
+
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp"
-        android:src="@drawable/floating"
         android:backgroundTint="#7cc7e0"
+        android:src="@drawable/floating"
         app:borderWidth="0dp"
-        app:fabSize="normal"/>
+        app:fabSize="normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:text="찜하기" />
+
+        <Button
+            android:id="@+id/button_noin_call"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:text="지원하기" />
+
+    </LinearLayout>
+
 </FrameLayout>

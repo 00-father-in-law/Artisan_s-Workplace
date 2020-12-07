@@ -1,17 +1,14 @@
 package com.father_in_law.artisan_s_workplace.Activity.Contents;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.father_in_law.artisan_s_workplace.Activity.Data.NoInJob;
-import com.father_in_law.artisan_s_workplace.Activity.Data.TalentShare;
 import com.father_in_law.artisan_s_workplace.R;
 
-public class Job extends AppCompatActivity {
+public class NoIn_jobDetailActivity extends AppCompatActivity {
 
     private String apiKey;
     private NoInJob getNoInJob;
@@ -33,7 +30,7 @@ public class Job extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_job);
+        setContentView(R.layout.activity_no_in_job_detail);
 
         apiKey = getString(R.string.noin_job_key);
         n_hpNotiEdate = findViewById(R.id.hpNotiEdate_noinjobdetail);

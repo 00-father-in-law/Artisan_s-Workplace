@@ -13,7 +13,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".Activity.Talent_ShareDetailActivity"></activity>
         <activity android:name=".Activity.Contents.program" />
-        <activity android:name=".Activity.Contents.Job" />
+        <activity android:name=".Activity.Contents.NoIn_jobDetailActivity" />
         <activity android:name=".Activity.Search.PopupActivity" />
         <activity android:name=".Activity.Search.SearchActivity" />
         <activity android:name=".Activity.SignUpActivity" />
@@ -36,5 +36,6 @@
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
 </manifest>

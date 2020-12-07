@@ -29,8 +29,6 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 public class Talent_ShareActivity extends AppCompatActivity {
     private String apiKey;
-    private String loc = "";
-    private String loc1 = "";
     private int pageNo = 1;
     private RecyclerView recyclerView;
     private List<TalentShare> tDatas = new ArrayList();
@@ -104,7 +102,7 @@ public class Talent_ShareActivity extends AppCompatActivity {
                 String adress = "http://apis.data.go.kr/B552474/JeOdJobOffPbServ/jegetOdJobOffPbList"
                         +"?serviceKey="+apiKey
                         +"&numOfRows=10"
-                        +"&pageNo="+pageNo+"&contRegnStr1=경기도";
+                        +"&pageNo="+pageNo+"&contRegnStr1=서울특별시"+"&contRegnStr2=강남구";
 
                 try {
                     //URL객체생성
@@ -188,5 +186,12 @@ public class Talent_ShareActivity extends AppCompatActivity {
                 }
             }
         }.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
     }
 }

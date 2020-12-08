@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,9 +21,10 @@ public class LoginActivity extends AppCompatActivity implements LoginRepository.
 
     private EditText email, password;
     private Button signIn;
-    private TextView signUp;
+    private TextView signUp, searchId, searchPassword;
     private TextInputLayout inputLayout;
     private ImageButton imageButton;
+    private ImageView kakao, google, naver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +34,15 @@ public class LoginActivity extends AppCompatActivity implements LoginRepository.
         email = findViewById(R.id.login_email_text);
         password = findViewById(R.id.login_password_text);
 
+        searchId = findViewById(R.id.login_searchId);
+        searchPassword = findViewById(R.id.login_searchPassword);
         signIn = findViewById(R.id.login_login_btn);
         signUp = findViewById(R.id.login_signup_btn);
         imageButton = findViewById(R.id.login_back_btn);
+
+        kakao = findViewById(R.id.login_kakao_btn);
+        google = findViewById(R.id.login_kakao_btn);
+        naver = findViewById(R.id.login_naver_btn);
 
         inputLayout = findViewById(R.id.login_password_textlayout);
 
@@ -60,12 +68,47 @@ public class LoginActivity extends AppCompatActivity implements LoginRepository.
             }
         });
 
+        searchId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LoginActivity.this, "개발중입니다..", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        searchPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LoginActivity.this, "개발중입니다..", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         // 회원가입 버튼
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
-                startActivity(intent);
+                Toast.makeText(LoginActivity.this, "Test계정을 사용해주세요..", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+//                startActivity(intent);
+            }
+        });
+
+        kakao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LoginActivity.this, "개발중입니다..", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LoginActivity.this, "개발중입니다..", Toast.LENGTH_SHORT).show();
+            }
+        });
+        naver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LoginActivity.this, "개발중입니다..", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -89,5 +132,5 @@ public class LoginActivity extends AppCompatActivity implements LoginRepository.
     }
 
 
-    //TODO:kms 자동 로그인, 카카오 로그인, 네이버 로그인, 비밀번호 찾기, 아이디 찾기, 로고 bold처리
+    //TODO:kms 자동 로그인, 카카오 로그인, 네이버 로그인, 비밀번호 찾기, 아이디 찾기
 }

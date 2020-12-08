@@ -44,7 +44,6 @@ public class Talent_ShareActivity extends AppCompatActivity {
 
     private ImageButton talent_share_back_btn;
     public WaitDialog dlg;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -204,4 +203,5 @@ public class Talent_ShareActivity extends AppCompatActivity {
         }.start();
 
     }
+
 }

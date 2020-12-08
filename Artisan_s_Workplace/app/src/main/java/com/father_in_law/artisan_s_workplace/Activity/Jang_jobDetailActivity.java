@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,10 +33,8 @@ public class Jang_jobDetailActivity extends AppCompatActivity {
     private TextView wageform; //임금 형태
     private TextView day; //지원일
 
-    private ArrayList<TextviewData> tDatas = new ArrayList();
-    private ArrayList<TextviewData> tDatas1 = new ArrayList();
-    private ArrayList<TextviewData> tDatas2 = new ArrayList();
-    private ArrayList<TextviewData> tDatas3 = new ArrayList();
+    private TextView Recru,Work,Loc,Agen;
+    private TextView RecruCon,WorkCon,LocCon,AgenCon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +57,18 @@ public class Jang_jobDetailActivity extends AppCompatActivity {
         wageform =findViewById(R.id.m_wageFrom);
         //모집 기간
         day = findViewById(R.id.m_recruitmentPeriod);
+        //모집정보
+        Recru = findViewById(R.id.tRecu);
+        RecruCon = findViewById(R.id.tRecuContent);
+        //근무정보
+        Work = findViewById(R.id.twork);
+        WorkCon = findViewById(R.id.tworkContent);
+        //근무지역
+        Loc = findViewById(R.id.tLoc);
+        LocCon = findViewById(R.id.tLocContent);
+        //기관정보
+        Agen = findViewById(R.id.tAgen);
+        AgenCon = findViewById(R.id.tAgenContent);
 
         JobItem jobitem = (JobItem) getIntent().getParcelableExtra("jangjob");
         getJobItem = jobitem;
@@ -71,54 +82,26 @@ public class Jang_jobDetailActivity extends AppCompatActivity {
             wageform.setText(jobitem.getWageFrom()); //임금형태
             day.setText(jobitem.getRecruitmentPeriod()); //모집기간
 
+            //모집정보
+            Recru.setText("모집 직종"+"\n"+"모집 기간"+"\n"+"요구 학력"+"\n"+"전공 계열"+"\n"+"요구 자격증"+"\n"+"요구 경력");
+            RecruCon.setText(jobitem.getRecruitmentType()+"\n"+jobitem.getRecruitmentPeriod()+"\n"+jobitem.getRequiredEducational()+
+                    "\n"+jobitem.getMajor()+"\n"+jobitem.getRequiredCertificate()+"\n"+jobitem.getRequiredCareer());
 
-            /*
-            //텍스트 리사이클러뷰 데이터 넣기
-            addData("모집 직종", jobitem.getRecruitmentType());
-            addData("모집 기간",jobitem.getRecruitmentPeriod());
-            addData("요구 학력", jobitem.getRequiredEducational());
-            addData("전공 계열", jobitem.getMajor());
-            addData("요구 자격증", jobitem.getRequiredCertificate());
-            addData("요구 경력", jobitem.getRequiredCareer());
+            //근무 정보
+            Work.setText("임금"+"\n"+"임금 형태"+"\n"+"입사 형태"+"\n"+"직무");
+            WorkCon.setText(jobitem.getWages()+"\n"+jobitem.getWageFrom()+"\n"+jobitem.getEntranceType()+"\n"+jobitem.getRecruitmentType());
 
+            //근무 지역
+            Loc.setText("사업장 명"+"\n"+"사업장 주소");
+            LocCon.setText(jobitem.getEstablishmentName()+"\n"+jobitem.getEstablishmentAddress());
 
-            addData1("임금",jobitem.getWages());
-            addData1("임금 형태",jobitem.getWageFrom());
-            addData1("입사 형태",jobitem.getEntranceType());
-            addData1("직무",jobitem.getRecruitmentType());
+            //운영 기관 정보
+            Agen.setText("사업장 명"+"\n"+"기업 형태"+"\n"+"담당 기관"+"\n"+"담당 기관 연락처");
+            AgenCon.setText(jobitem.getEstablishmentName()+"\n"+jobitem.getCorporateForm()+"\n"+jobitem.getAgency()+
+                    "\n"+jobitem.getContactInformation());
 
-            addData2("사업장 명",jobitem.getEstablishmentName());
-            addData2("사업장 주소", jobitem.getEstablishmentAddress());
-
-            addData3("사업장 명",jobitem.getEstablishmentName());
-            addData3("기업 형태",jobitem.getCorporateForm());
-            addData3("담당 기관",jobitem.getAgency());
-            addData3("담당 기관 연락처",jobitem.getContactInformation());
-
-
-             */
         }
 
-        //텍스트 리사이클러뷰 연결
-        /*RecyclerView recyclerView = findViewById(R.id.textview_recyclerview);
-        RecyclerView recyclerView1 = findViewById(R.id.textview_recyclerview1);
-        RecyclerView recyclerView2 = findViewById(R.id.textview_recyclerview2);
-        RecyclerView recyclerView3 = findViewById(R.id.textview_recyclerview3);
-
-        TextviewListAdapter textviewListAdapter = new TextviewListAdapter(tDatas);
-        TextviewListAdapter textviewListAdapter1 = new TextviewListAdapter(tDatas1);
-        TextviewListAdapter textviewListAdapter2 = new TextviewListAdapter(tDatas2);
-        TextviewListAdapter textviewListAdapter3 = new TextviewListAdapter(tDatas3);
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(this)) ;
-        recyclerView1.setLayoutManager(new LinearLayoutManager(this)) ;
-        recyclerView2.setLayoutManager(new LinearLayoutManager(this)) ;
-        recyclerView3.setLayoutManager(new LinearLayoutManager(this)) ;
-
-        recyclerView.setAdapter(textviewListAdapter);
-        recyclerView1.setAdapter(textviewListAdapter1);
-        recyclerView2.setAdapter(textviewListAdapter2);
-        recyclerView3.setAdapter(textviewListAdapter3);*/
     }
 
 
@@ -139,28 +122,4 @@ public class Jang_jobDetailActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*
-    //텍스트 리사이클러뷰에 데이터 넣기1
-    public void addData(String title, String contents){
-        TextviewData item = new TextviewData(title, contents);
-        tDatas.add(item);
-    }
-
-    //텍스트 리사이클러뷰에 데이터 넣기2
-    public void addData1(String title, String contents){
-        TextviewData item = new TextviewData(title, contents);
-        tDatas1.add(item);
-    }
-
-    //텍스트 리사이클러뷰에 데이터 넣기3
-    public void addData2(String title, String contents){
-        TextviewData item = new TextviewData(title, contents);
-        tDatas2.add(item);
-    }
-
-    //텍스트 리사이클러뷰에 데이터 넣기4
-    public void addData3(String title, String contents){
-        TextviewData item = new TextviewData(title, contents);
-        tDatas3.add(item);
-    }*/
 }

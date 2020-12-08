@@ -5,7 +5,7 @@
     <string name="talent_Share">재능 나눔 활동</string>
     <string name="edu_Pro">교육 프로그램</string>
     <string name="login">로그인</string>
-    <string name="logout">로그아웃</string>
+    <string name="logout"><b>장인</b>님의\n내 <b>일</b>을\n찾아보세요!</string>
     <string name="Jang_job">장애인 채용</string>
     <string name="NoIn_Job">노인 채용</string>
     <string name="Edu_Pro">교육 프로그램</string>

@@ -153,7 +153,6 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <!--소제목-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -183,22 +182,31 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="13dp"
-                        android:background="@color/darkskyblue" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circulartext">
 
-                    <!--반복 텍스트 리사이클러뷰-->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tRecu"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:nestedScrollingEnabled="false"
+                            app:autoSizeTextType="uniform" />
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/textview_recyclerview1"
+                        <TextView
+                            android:id="@+id/tRecuContent"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="15dp"
-                            android:nestedScrollingEnabled="false" />
-                    </RelativeLayout>
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:nestedScrollingEnabled="false"
+                            app:autoSizeTextType="uniform" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -235,22 +243,88 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="13dp"
-                        android:background="@color/darkskyblue" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circulartext">
 
-                    <!--반복 텍스트 리사이클러뷰-->
-                    <RelativeLayout
+                        <TextView
+                            android:id="@+id/twork"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:nestedScrollingEnabled="false"
+                            app:autoSizeTextType="uniform" />
+
+                        <TextView
+                            android:id="@+id/tworkContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:nestedScrollingEnabled="false"
+                            app:autoSizeTextType="uniform" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="30dp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/textview_recyclerview2"
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/img_first_letter_big" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="기관 정보"
+                            android:textColor="@color/black_sub"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circulartext">
+
+                        <TextView
+                            android:id="@+id/tAgen"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:nestedScrollingEnabled="false"
+                            app:autoSizeTextType="uniform" />
+
+                        <TextView
+                            android:id="@+id/tAgenContent"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="15dp"
-                            android:nestedScrollingEnabled="false" />
-                    </RelativeLayout>
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:nestedScrollingEnabled="false"
+                            app:autoSizeTextType="uniform" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -288,71 +362,39 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="13dp"
-                        android:background="@color/darkskyblue" />
-
-                    <!--반복 텍스트 리사이클러뷰-->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/textview_recyclerview3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="15dp"
-                            android:nestedScrollingEnabled="false" />
-                    </RelativeLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="30dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="9dp"
-                            android:layout_height="14dp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@drawable/img_first_letter_big" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circulartext">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tLoc"
+                            android:layout_width="85dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="7dp"
-                            android:text="기관 정보"
-                            android:textColor="@color/black_sub"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:nestedScrollingEnabled="false"
+                            app:autoSizeTextType="uniform" />
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="13dp"
-                        android:background="@color/darkskyblue" />
-
-                    <!--반복 텍스트 리사이클러뷰-->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/textview_recyclerview4"
+                        <TextView
+                            android:id="@+id/tLocContent"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="15dp"
-                            android:nestedScrollingEnabled="false" />
-                    </RelativeLayout>
-
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:nestedScrollingEnabled="false"
+                            app:autoSizeTextType="uniform" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <!--소제목-->
 
             </LinearLayout>
         </ScrollView>

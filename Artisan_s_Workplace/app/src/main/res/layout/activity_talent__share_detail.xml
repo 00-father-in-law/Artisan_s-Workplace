@@ -29,6 +29,7 @@
         android:layout_height="match_parent">
 
         <ScrollView
+            android:id="@+id/scrollView_talentshareDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="true"
@@ -164,7 +165,7 @@
 
                     <TextView
                         android:id="@+id/hpCont_talentshareDetail"
-                        android:layout_width="match_parent"
+                        android:layout_width="340dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="13dp"
                         android:text="홈페이지 공고가 없습니다."
@@ -226,6 +227,7 @@
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingButton_talentshareDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"

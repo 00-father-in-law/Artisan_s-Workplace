@@ -63,8 +63,8 @@ public class Talent_Share_Adapter extends RecyclerView.Adapter<Talent_Share_Adap
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int pos = TalentShareViewHolder.this.getAdapterPosition();
-                    if (pos != -1 && Talent_Share_Adapter.this.mlistener != null) {
+                    int pos = getAdapterPosition() ;
+                    if (pos != RecyclerView.NO_POSITION) {
                         Talent_Share_Adapter.this.mlistener.onItemClick(view, pos);
                     }
                 }

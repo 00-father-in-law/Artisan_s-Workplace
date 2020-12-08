@@ -137,27 +137,26 @@ public class Talent_ShareActivity extends AppCompatActivity {
                                 tagName=xpp.getName();
                                 if (tagName.equals("item")) {
                                     talentShare = new TalentShare();
-                                } else if (!tagName.equals("hpInvtCnt")) {
-                                    if (tagName.equals("hpNotiEdate")) {
-                                        talentShare.setHpNotiEdate(xpp.nextText());
-                                    } else if (tagName.equals("hpNotiSdate")) {
-                                        talentShare.setHpNotiSdate(xpp.nextText());
-                                    } else if (tagName.equals("orgCd")) {
-                                        talentShare.setOrgCd(xpp.nextText());
-                                    } else if (tagName.equals("orgNm")) {
-                                        talentShare.setOrgNm(xpp.nextText());
-                                    } else if (tagName.equals("projEdate")) {
-                                        talentShare.setProjEdate(xpp.nextText());
-                                    } else if (tagName.equals("projName")) {
-                                        talentShare.setProjName(xpp.nextText());
-                                    } else if (tagName.equals("projNo")) {
-                                        talentShare.setProjNo(xpp.nextText());
-                                    } else if (tagName.equals("projSdate")) {
-                                        talentShare.setProjSdate(xpp.nextText());
-                                    } else if (tagName.equals("totalCount") && pageNo == 1) {
-                                        totalCount = Integer.parseInt(xpp.nextText()) - 10;
-                                    }
+                                } else if (tagName.equals("hpNotiEdate")) {
+                                    talentShare.setHpNotiEdate(xpp.nextText());
+                                } else if (tagName.equals("hpNotiSdate")) {
+                                    talentShare.setHpNotiSdate(xpp.nextText());
+                                } else if (tagName.equals("orgCd")) {
+                                    talentShare.setOrgCd(xpp.nextText());
+                                } else if (tagName.equals("orgNm")) {
+                                    talentShare.setOrgNm(xpp.nextText());
+                                } else if (tagName.equals("projEdate")) {
+                                    talentShare.setProjEdate(xpp.nextText());
+                                } else if (tagName.equals("projName")) {
+                                    talentShare.setProjName(xpp.nextText());
+                                } else if (tagName.equals("projNo")) {
+                                    talentShare.setProjNo(xpp.nextText());
+                                } else if (tagName.equals("projSdate")) {
+                                    talentShare.setProjSdate(xpp.nextText());
+                                } else if (tagName.equals("totalCount") && pageNo == 1) {
+                                    totalCount = Integer.parseInt(xpp.nextText()) - 10;
                                 }
+
                                 break;
 
                             case XmlPullParser.TEXT:

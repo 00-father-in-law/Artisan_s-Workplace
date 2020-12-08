@@ -41,5 +41,4 @@ dependencies {
 
     //CSV Parser
     implementation 'de.siegmar:fastcsv:1.0.4'
-
 }

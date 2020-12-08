@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 import com.father_in_law.artisan_s_workplace.Activity.Contents.NoIn_jobDetailActivity;
 //import com.father_in_law.artisan_s_workplace.Activity.Contents.TabActivity;
 import com.father_in_law.artisan_s_workplace.Activity.Data.NoInJob;
+import com.father_in_law.artisan_s_workplace.Activity.Search.WaitDialog;
 import com.father_in_law.artisan_s_workplace.Adapter.NoIn_job_Adapter;
 import com.father_in_law.artisan_s_workplace.R;
 
@@ -41,6 +44,7 @@ public class NoIn_jobActivity extends AppCompatActivity {
     private ImageButton noinjob_back_btn;
     private Button btn1;
 
+    public WaitDialog dlg;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +56,11 @@ public class NoIn_jobActivity extends AppCompatActivity {
 
         btn1 = findViewById(R.id.noin_contRegn1);
         btn1.setText("서울시 강남구");
+
+        //다이얼로그 띄우기
+        dlg = new WaitDialog(NoIn_jobActivity.this);
+        dlg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dlg.show();
 
         NoIn_job_Adapter noin_job_Adapter = new NoIn_job_Adapter(nDatas);
         njAdapter = noin_job_Adapter;
@@ -194,6 +203,7 @@ public class NoIn_jobActivity extends AppCompatActivity {
                     Log.d("asdf", "3 XmlPullParserException");
                     e3.printStackTrace();
                 }
+                dlg.dismiss();
             }
         }.start();
     }

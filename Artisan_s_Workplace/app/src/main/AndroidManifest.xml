@@ -4,6 +4,8 @@
     package="com.father_in_law.artisan_s_workplace">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.Jang_jobDetailActivity"></activity>
+        <activity android:name=".Activity.Search.WaitDialog"></activity>
+        <activity android:name=".Activity.Jang_jobDetailActivity" />
         <activity android:name=".Activity.Talent_ShareDetailActivity" />
         <activity android:name=".Activity.Contents.program" />
         <activity android:name=".Activity.Contents.NoIn_jobDetailActivity" />
@@ -37,8 +40,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
 
 </manifest>

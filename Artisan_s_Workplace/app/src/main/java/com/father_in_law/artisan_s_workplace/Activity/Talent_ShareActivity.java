@@ -1,6 +1,8 @@
 package com.father_in_law.artisan_s_workplace.Activity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
@@ -15,6 +17,9 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.father_in_law.artisan_s_workplace.Activity.Data.TalentShare;
+import com.father_in_law.artisan_s_workplace.Activity.Search.PopupActivity;
+import com.father_in_law.artisan_s_workplace.Activity.Search.SearchActivity;
+import com.father_in_law.artisan_s_workplace.Activity.Search.WaitDialog;
 import com.father_in_law.artisan_s_workplace.Adapter.Talent_Share_Adapter;
 import com.father_in_law.artisan_s_workplace.R;
 import java.io.IOException;
@@ -38,6 +43,7 @@ public class Talent_ShareActivity extends AppCompatActivity {
     private Button btn1;
 
     private ImageButton talent_share_back_btn;
+    public WaitDialog dlg;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +55,11 @@ public class Talent_ShareActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.talent_share_contRegn1);
 
         btn1.setText("서울시 강남구");
+
+        //다이얼로그 띄우기
+        dlg = new WaitDialog(Talent_ShareActivity.this);
+        dlg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dlg.show();
 
         recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), 1));
 
@@ -188,7 +199,9 @@ public class Talent_ShareActivity extends AppCompatActivity {
                     Log.d("asdf", "3 XmlPullParserException");
                     e3.printStackTrace();
                 }
+                dlg.dismiss();
             }
         }.start();
+
     }
 }

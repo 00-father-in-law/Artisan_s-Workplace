@@ -1,17 +1,9 @@
 package com.father_in_law.artisan_s_workplace.Activity;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.father_in_law.artisan_s_workplace.Activity.Search.SearchActivity;
 import com.father_in_law.artisan_s_workplace.R;
 
 public class NoIn_Call_Phone_Activity extends AppCompatActivity {
@@ -21,14 +13,15 @@ public class NoIn_Call_Phone_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_no_in_job_detail);
 
-        TextView et1 = (TextView) findViewById(R.id.button_noin_call);
+        /*
+          TextView et1 = (TextView) findViewById(R.id.button_noin_call);
         et1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "개발 중입니다.", Toast.LENGTH_SHORT).show();
             }
         });
-        /*
+
         Button b = findViewById(R.id.button_noin_call);
         b.setOnClickListener(new View.OnClickListener() {
 

@@ -57,13 +57,40 @@
             android:layout_marginHorizontal="24dp"
             android:orientation="horizontal">
 
+            <!--재능나눔-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_weight="1"
+                android:id="@+id/Talent_Share_btn"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/circularbtn_white">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/img_giftshare"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Talent_Share"
+                    android:textColor="@color/darkskyblue"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
             <!--장애인 고용-->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="160dp"
                 android:layout_weight="1"
                 android:id="@+id/Jang_Job_btn"
-                android:layout_marginEnd="12dp"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/circularbtn_white">
@@ -85,32 +112,7 @@
 
             </LinearLayout>
 
-            <!--재능나눔-->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="160dp"
-                android:layout_weight="1"
-                android:id="@+id/Talent_Share_btn"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="@drawable/circularbtn_white">
-                
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/img_giftshare"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Talent_Share"
-                    android:textColor="@color/darkskyblue"
-                    android:layout_marginTop="10dp"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    />
-
-            </LinearLayout>
 
         </LinearLayout>
 

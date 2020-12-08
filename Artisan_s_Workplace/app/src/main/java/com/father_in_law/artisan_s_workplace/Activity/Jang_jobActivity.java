@@ -1,41 +1,28 @@
 package com.father_in_law.artisan_s_workplace.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.content.res.Resources;
-import android.content.res.XmlResourceParser;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.father_in_law.artisan_s_workplace.Activity.Search.WaitDialog;
 import com.father_in_law.artisan_s_workplace.Adapter.JobAdapter;
-import com.father_in_law.artisan_s_workplace.Adapter.NoIn_job_Adapter;
 import com.father_in_law.artisan_s_workplace.R;
 import com.father_in_law.artisan_s_workplace.data.JobItem;
 
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import de.siegmar.fastcsv.reader.CsvContainer;
 import de.siegmar.fastcsv.reader.CsvReader;
@@ -66,8 +53,6 @@ public class Jang_jobActivity extends AppCompatActivity {
 
         loadJobData();
 
-
-
         this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -91,6 +76,7 @@ public class Jang_jobActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listview);
         adapter = new JobAdapter(items);
+        adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
     }
 

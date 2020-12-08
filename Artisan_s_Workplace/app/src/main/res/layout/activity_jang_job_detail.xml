@@ -43,8 +43,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#ECECEC"
                     android:orientation="vertical"
+                    android:background="@drawable/background_detail_blue_border"
                     android:padding="30dp">
 
                     <TextView
@@ -82,8 +82,8 @@
                                 android:id="@+id/imageView2"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:background="@drawable/circularbtn_20_blue_solid"
-                                app:srcCompat="@android:drawable/btn_star_big_on" />
+                                android:background="@drawable/img_lightblue_btn"
+                                app:srcCompat="@android:drawable/ic_menu_compass" />
 
                             <TextView
                                 android:id="@+id/m_wages"
@@ -96,7 +96,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="50dp"
+                            android:layout_marginLeft="20dp"
                             android:layout_marginTop="15dp"
                             android:gravity="center"
                             android:orientation="vertical">
@@ -105,7 +105,7 @@
                                 android:id="@+id/imageView3"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:background="@drawable/circularbtn_20_blue_solid"
+                                android:background="@drawable/img_lightblue_btn"
                                 app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
                             <TextView
@@ -120,7 +120,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="50dp"
+                            android:layout_marginLeft="20dp"
                             android:layout_marginTop="15dp"
                             android:gravity="center"
                             android:orientation="vertical">
@@ -129,7 +129,7 @@
                                 android:id="@+id/imageView4"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:background="@drawable/circularbtn_20_blue_solid"
+                                android:background="@drawable/img_lightblue_btn"
                                 app:srcCompat="@android:drawable/ic_menu_agenda" />
 
                             <TextView
@@ -146,7 +146,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="30dp"
                         android:text="지원 마감일 :  "
                         android:textColor="@color/black_sub"
                         android:textSize="18dp"
@@ -180,18 +180,25 @@
 
                     </LinearLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/darkskyblue"
+                        />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/circulartext">
+                        android:layout_marginTop="10dp">
 
                         <TextView
                             android:id="@+id/tRecu"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
+                            android:textSize="16dp"
+
                             android:layout_marginBottom="10dp"
                             android:nestedScrollingEnabled="false"
                             app:autoSizeTextType="uniform" />
@@ -201,7 +208,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
+                            android:textSize="16dp"
+
                             android:layout_marginRight="10dp"
                             android:layout_marginBottom="10dp"
                             android:nestedScrollingEnabled="false"
@@ -241,28 +249,34 @@
 
                     </LinearLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/darkskyblue"
+                        />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/circulartext">
+                        android:layout_marginTop="10dp">
 
                         <TextView
                             android:id="@+id/twork"
                             android:layout_width="85dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
+                            android:textSize="16dp"
                             android:layout_marginBottom="10dp"
                             android:nestedScrollingEnabled="false"
                             app:autoSizeTextType="uniform" />
 
                         <TextView
                             android:id="@+id/tworkContent"
+                            android:textSize="16dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:layout_marginBottom="10dp"
                             android:nestedScrollingEnabled="false"
@@ -298,19 +312,26 @@
 
                     </LinearLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/darkskyblue"
+                        />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/circulartext">
+                        android:layout_marginTop="10dp">
 
                         <TextView
                             android:id="@+id/tAgen"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
+                            android:textSize="16dp"
+
                             android:nestedScrollingEnabled="false"
                             app:autoSizeTextType="uniform" />
 
@@ -319,9 +340,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:layout_marginBottom="10dp"
+                            android:textSize="16dp"
+
                             android:nestedScrollingEnabled="false"
                             app:autoSizeTextType="uniform" />
                     </LinearLayout>
@@ -360,18 +382,25 @@
 
                     </LinearLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/darkskyblue"
+                        />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/circulartext">
+                        android:layout_marginTop="10dp">
 
                         <TextView
                             android:id="@+id/tLoc"
                             android:layout_width="85dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
+                            android:textSize="16dp"
+
                             android:layout_marginBottom="10dp"
                             android:nestedScrollingEnabled="false"
                             app:autoSizeTextType="uniform" />
@@ -381,8 +410,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
+                            android:textSize="16dp"
+
                             android:layout_marginBottom="10dp"
                             android:nestedScrollingEnabled="false"
                             app:autoSizeTextType="uniform" />
@@ -395,20 +425,8 @@
                     android:layout_height="50dp" />
 
                 <!--소제목-->
-
             </LinearLayout>
         </ScrollView>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
-            android:backgroundTint="#7cc7e0"
-            android:src="@drawable/floating"
-            app:borderWidth="0dp"
-            app:fabSize="normal" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -416,20 +434,33 @@
             android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
             android:orientation="horizontal">
 
-            <Button
-                android:layout_width="69dp"
+            <TextView
+                android:id="@+id/button_heart"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:textSize="16dp"
+                android:background="@color/white"
+                android:textColor="@color/darkskyblue"
                 android:text="찜하기" />
 
-            <Button
+            <TextView
                 android:id="@+id/button_noin_call"
-                android:layout_width="346dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:paddingVertical="12dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@color/skyblue"
                 android:layout_height="wrap_content"
                 android:text="지원하기" />
 
         </LinearLayout>
 
     </FrameLayout>
-
 
 </LinearLayout>

@@ -1,27 +1,18 @@
 package com.father_in_law.artisan_s_workplace.Activity;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.father_in_law.artisan_s_workplace.Activity.Data.TalentShare;
-import com.father_in_law.artisan_s_workplace.Activity.Data.TextviewData;
-import com.father_in_law.artisan_s_workplace.Adapter.TextviewListAdapter;
 import com.father_in_law.artisan_s_workplace.R;
 import com.father_in_law.artisan_s_workplace.data.JobItem;
-
-import java.util.ArrayList;
 
 public class Jang_jobDetailActivity extends AppCompatActivity {
     private JobItem getJobItem;
@@ -44,6 +35,24 @@ public class Jang_jobDetailActivity extends AppCompatActivity {
         //툴바
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbarMethod(toolbar);
+
+        //지원하기
+        TextView et1 = (TextView) findViewById(R.id.button_noin_call);
+        et1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "개발 중입니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //찜하기
+        TextView et2 = (TextView) findViewById(R.id.button_heart);
+        et2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "개발 중입니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         //사업장 명
         name = findViewById(R.id.m_establishmentName);
@@ -99,11 +108,8 @@ public class Jang_jobDetailActivity extends AppCompatActivity {
             Agen.setText("사업장 명"+"\n"+"기업 형태"+"\n"+"담당 기관"+"\n"+"담당 기관 연락처");
             AgenCon.setText(jobitem.getEstablishmentName()+"\n"+jobitem.getCorporateForm()+"\n"+jobitem.getAgency()+
                     "\n"+jobitem.getContactInformation());
-
         }
-
     }
-
 
     //툴바 메서드
     public void toolbarMethod(Toolbar toolbar){
@@ -121,5 +127,4 @@ public class Jang_jobDetailActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

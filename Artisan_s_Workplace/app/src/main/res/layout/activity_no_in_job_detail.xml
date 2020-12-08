@@ -14,7 +14,9 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="56dp"
+            >
 
             <LinearLayout
                 android:orientation="vertical"
@@ -75,7 +77,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="7dp"
-                        android:text="재능 나눔 정보"/>
+                        android:text="모집 정보"/>
 
                 </LinearLayout>
 
@@ -263,7 +265,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="13dp"
-                    android:text="내용@@@@내용@@@@내용@@@@내용@@@@내용@@@@내용@@@@"/>
+                    android:text="내용"/>
 
             </LinearLayout>
             <LinearLayout
@@ -305,31 +307,17 @@
                     android:layout_marginTop="13dp"/>
 
                 <TextView
-                    android:textSize="16sp"
+                    android:textSize="16dp"
+                    android:padding="10dp"
                     android:textColor="@color/black_sub"
                     android:background="@drawable/circulartext"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="13dp"
                     android:text="지도자리(임시)"/>
-
-
-
-
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp"
-        android:backgroundTint="#7cc7e0"
-        android:src="@drawable/floating"
-        app:borderWidth="0dp"
-        app:fabSize="normal" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -337,17 +325,30 @@
         android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
         android:orientation="horizontal">
 
-        <Button
-            android:layout_width="69dp"
+        <TextView
+            android:id="@+id/button_heart"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:textSize="16dp"
+            android:background="@color/white"
+            android:textColor="@color/darkskyblue"
             android:text="찜하기" />
 
-        <Button
-            android:id="@+id/button_in_call"
-            android:layout_width="346dp"
+        <TextView
+            android:id="@+id/button_noin_call"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:paddingVertical="12dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/skyblue"
             android:layout_height="wrap_content"
             android:text="지원하기" />
-
     </LinearLayout>
 
 </FrameLayout>

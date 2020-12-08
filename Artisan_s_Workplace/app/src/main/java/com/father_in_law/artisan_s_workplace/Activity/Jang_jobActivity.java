@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.father_in_law.artisan_s_workplace.Activity.Search.WaitDialog;
 import com.father_in_law.artisan_s_workplace.Adapter.JobAdapter;
 import com.father_in_law.artisan_s_workplace.Adapter.NoIn_job_Adapter;
 import com.father_in_law.artisan_s_workplace.R;
@@ -44,6 +47,8 @@ public class Jang_jobActivity extends AppCompatActivity {
     ArrayList<JobItem> items = new ArrayList<>();
     private Button btn1;
 
+    public WaitDialog dlg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,9 +56,17 @@ public class Jang_jobActivity extends AppCompatActivity {
 
         btn1 = findViewById(R.id.jang_contRegn1);
         btn1.setText("서울시 강남구");
+
+        //다이얼로그 띄우기
+        dlg = new WaitDialog(Jang_jobActivity.this);
+        dlg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dlg.show();
+
         initView();
 
         loadJobData();
+
+
 
         this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -101,6 +114,7 @@ public class Jang_jobActivity extends AppCompatActivity {
                     showErrorMessage("데이터 혹은 파싱 라이브러리에 문제가 있어요 ㅠㅠㅠ");
                     e.printStackTrace();
                 }
+                dlg.dismiss();
             }
         }.start();
     }

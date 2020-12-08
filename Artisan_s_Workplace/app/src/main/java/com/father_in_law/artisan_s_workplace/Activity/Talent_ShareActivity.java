@@ -58,7 +58,6 @@ public class Talent_ShareActivity extends AppCompatActivity {
         recyclerView.setAdapter(talent_Share_Adapter);
 
         loadData();
-
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {

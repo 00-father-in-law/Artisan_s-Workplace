@@ -1,11 +1,17 @@
 package com.father_in_law.artisan_s_workplace.Activity;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.father_in_law.artisan_s_workplace.Activity.Edu_ProActivity;
@@ -21,19 +27,28 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth = FirebaseUtil.getAuth();
-    private Button Login_btn, Logout_btn;
+    private TextView Login_btn, Logout_btn;
+    private ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Login_btn = (Button) findViewById(R.id.login_btn); //로그인 페이지 이동
-        Logout_btn = (Button) findViewById(R.id.logout_btn); //로그아웃 버튼
-        Button Jangjob_btn = (Button) findViewById(R.id.Jang_Job_btn); //장애인 채용 페이지 이동
-        Button Noinjob_btn = (Button) findViewById(R.id.NoIn_Job_btn); //노인 채용 페이지 이동
-        Button TalentShare_btn = (Button) findViewById(R.id.Talent_Share_btn); //재능 나눔 페이지 이동
-        Button EduPro_btn = (Button) findViewById(R.id.Edu_Pro_btn); //교육프로그램 페이지 이동
+        Login_btn = (TextView) findViewById(R.id.login_btn); //로그인 페이지 이동
+        Logout_btn = (TextView) findViewById(R.id.logout_btn); //로그아웃 버튼
+        LinearLayout Jangjob_btn = (LinearLayout) findViewById(R.id.Jang_Job_btn); //장애인 채용 페이지 이동
+        LinearLayout Noinjob_btn = (LinearLayout) findViewById(R.id.NoIn_Job_btn); //노인 채용 페이지 이동
+        LinearLayout TalentShare_btn = (LinearLayout) findViewById(R.id.Talent_Share_btn); //재능 나눔 페이지 이동
+        LinearLayout EduPro_btn = (LinearLayout) findViewById(R.id.Edu_Pro_btn); //교육프로그램 페이지 이동
+        imageButton = findViewById(R.id.login_back_btn);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         Login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,4 +120,5 @@ public class MainActivity extends AppCompatActivity {
             Logout_btn.setVisibility(View.VISIBLE);
         }
     }
+
 }

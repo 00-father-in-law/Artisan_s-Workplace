@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.father_in_law.artisan_s_workplace.Activity.Data.TalentShare;
 import com.father_in_law.artisan_s_workplace.Activity.Data.TextviewData;
-import com.father_in_law.artisan_s_workplace.Adapter.Talent_Share_Adapter;
 import com.father_in_law.artisan_s_workplace.Adapter.TextviewListAdapter;
 import com.father_in_law.artisan_s_workplace.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -32,7 +31,6 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Talent_ShareDetailActivity extends AppCompatActivity {
     private String apiKey;
@@ -105,6 +103,8 @@ public class Talent_ShareDetailActivity extends AppCompatActivity {
 
     //날짜 년월일 넣기
     public String dateParser(String s){
+        if(s.length() < 8) return "";
+
         String str = "";
         str += s.substring(0,4) + "년 ";
 
@@ -130,7 +130,7 @@ public class Talent_ShareDetailActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() ==android.R.id.home){
+        if(item.getItemId() == android.R.id.home){
             onBackPressed();
         }
         return super.onOptionsItemSelected(item);
@@ -208,6 +208,4 @@ public class Talent_ShareDetailActivity extends AppCompatActivity {
             }
         }.start();
     }
-
-
 }

@@ -73,6 +73,8 @@ public class Talent_Share_Adapter extends RecyclerView.Adapter<Talent_Share_Adap
     }
 
     public String dateParser(String s){
+        if(s.length() < 8) return "";
+
         String str = "";
         str += s.substring(0,4) + ".";
         str+=s.substring(4,6);

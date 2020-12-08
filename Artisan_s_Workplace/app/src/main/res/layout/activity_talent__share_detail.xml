@@ -165,7 +165,7 @@
 
                     <TextView
                         android:id="@+id/hpCont_talentshareDetail"
-                        android:layout_width="340dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="13dp"
                         android:text="홈페이지 공고가 없습니다."

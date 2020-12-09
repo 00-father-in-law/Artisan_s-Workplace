@@ -51,7 +51,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:layout_marginRight="10dp"
-                android:paddingHorizontal="7dp"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/circularbtn_white"
                 android:text="도"
@@ -89,7 +90,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/talent_share_recyclerview"
         android:scrollbars="none"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
